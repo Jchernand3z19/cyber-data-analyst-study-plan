@@ -45,7 +45,7 @@ jobs:
               }
             }
             const openIssues = await github.paginate(github.rest.issues.listForRepo, {
-              owner, repo, state: "open", labels: labelName, per_page: 100
+              owner, repo, state: "open", per_page: 100
             });
             let issue = openIssues.find(item => !item.pull_request && item.title === title);
             if (!issue) {
@@ -65,21 +65,22 @@ jobs:
                   "- Si no terminas, deja el tema pendiente.",
                   "- No marques nada aprobado sin práctica y evaluación superada.",
                   "- ChatGPT es solo asistente y evaluador; no modifica este repositorio.",
-                  "- Usa datos públicos, sintéticos o autorizados. No subas secretos ni datos personales reales.",
-                  "",
-                  "Para recibir correo, suscríbete a este issue y revisa las preferencias de notificación por email de GitHub."
-                ].join("\n"),
-                labels: [labelName]
-              });
-              issue = created.data;
-            } else {
-              await github.rest.issues.createComment({
-                owner, repo, issue_number: issue.number,
-                body: [
-                  "Recordatorio de estudio: reserva unos 60 minutos para retomar el tema pendiente en [tracker.md](../blob/main/tracker.md).",
-                  "",
-                  "No saltes contenido ni marques el día como aprobado sin práctica y evaluación. Si hoy no puedes estudiar, deja el tema pendiente."
+                  "- Usa datos públicos, sintéticos o autorizados. No subas secretos ni datos personales reales."
                 ].join("\n")
               });
+              issue = created.data;
             }
+            await github.rest.issues.addLabels({
+              owner, repo, issue_number: issue.number, labels: [labelName]
+            });
+            await github.rest.issues.createComment({
+              owner, repo, issue_number: issue.number,
+              body: [
+                "Recordatorio de estudio: reserva unos 60 minutos para retomar el tema pendiente en [tracker.md](../blob/main/tracker.md).",
+                "",
+                "No saltes contenido ni marques el día como aprobado sin práctica y evaluación. Si hoy no puedes estudiar, deja el tema pendiente.",
+                "",
+                "Para recibir correo, suscríbete a este issue y revisa las preferencias de notificación por email de GitHub."
+              ].join("\n")
+            });
             core.notice("Study reminder issue: #" + issue.number + " (" + issue.html_url + ")");
