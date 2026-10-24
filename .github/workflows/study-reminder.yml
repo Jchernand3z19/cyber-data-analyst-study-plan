@@ -1,0 +1,85 @@
+name: Study reminder
+
+on:
+  # 01:00 UTC is approximately 19:00 the previous day in Honduras (UTC-6).
+  # UTC Tuesday-Sunday corresponds to Honduras Monday-Saturday.
+  schedule:
+    - cron: "0 1 * * 0,2-6"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+concurrency:
+  group: study-reminder
+  cancel-in-progress: false
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create or update the study reminder issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const title = "📚 Estudio Security Data — sesión y tema pendiente";
+            const labelName = "study-reminder";
+            let labelExists = true;
+            try {
+              await github.rest.issues.getLabel({ owner, repo, name: labelName });
+            } catch (error) {
+              if (error.status === 404) labelExists = false;
+              else throw error;
+            }
+            if (!labelExists) {
+              try {
+                await github.rest.issues.createLabel({
+                  owner, repo, name: labelName, color: "1d76db",
+                  description: "Seguimiento del plan de estudio"
+                });
+              } catch (error) {
+                if (error.status !== 422) throw error;
+              }
+            }
+            const openIssues = await github.paginate(github.rest.issues.listForRepo, {
+              owner, repo, state: "open", labels: labelName, per_page: 100
+            });
+            let issue = openIssues.find(item => !item.pull_request && item.title === title);
+            if (!issue) {
+              const created = await github.rest.issues.create({
+                owner, repo, title,
+                body: [
+                  "## Recordatorio de estudio (60 minutos)",
+                  "",
+                  "Retoma el tema pendiente más antiguo de [tracker.md](../blob/main/tracker.md).",
+                  "",
+                  "1. **10 min:** repasa lo anterior.",
+                  "2. **20 min:** estudia el concepto del día.",
+                  "3. **20 min:** realiza una práctica reproducible y segura relacionada con PharmaTracker.",
+                  "4. **10 min:** anota evidencia y dudas.",
+                  "",
+                  "### Reglas",
+                  "- Si no terminas, deja el tema pendiente.",
+                  "- No marques nada aprobado sin práctica y evaluación superada.",
+                  "- ChatGPT es solo asistente y evaluador; no modifica este repositorio.",
+                  "- Usa datos públicos, sintéticos o autorizados. No subas secretos ni datos personales reales.",
+                  "",
+                  "Para recibir correo, suscríbete a este issue y revisa las preferencias de notificación por email de GitHub."
+                ].join("\n"),
+                labels: [labelName]
+              });
+              issue = created.data;
+            } else {
+              await github.rest.issues.createComment({
+                owner, repo, issue_number: issue.number,
+                body: [
+                  "Recordatorio de estudio: reserva unos 60 minutos para retomar el tema pendiente en [tracker.md](../blob/main/tracker.md).",
+                  "",
+                  "No saltes contenido ni marques el día como aprobado sin práctica y evaluación. Si hoy no puedes estudiar, deja el tema pendiente."
+                ].join("\n")
+              });
+            }
+            core.notice("Study reminder issue: #" + issue.number + " (" + issue.html_url + ")");
