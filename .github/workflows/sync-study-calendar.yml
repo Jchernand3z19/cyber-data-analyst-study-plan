@@ -1,0 +1,39 @@
+name: Sync study calendar
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Weekly Sunday 15:00 UTC (09:00 Honduras): ensure recurring calendar series exist.
+    - cron: "0 15 * * 0"
+
+permissions:
+  contents: read
+
+jobs:
+  sync-calendar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate calendar integration secrets
+        env:
+          CALENDAR_WEB_APP_URL: ${{ secrets.CALENDAR_WEB_APP_URL }}
+          STUDY_CALENDAR_TOKEN: ${{ secrets.STUDY_CALENDAR_TOKEN }}
+        run: |
+          if [ -z "$CALENDAR_WEB_APP_URL" ] || [ -z "$STUDY_CALENDAR_TOKEN" ]; then
+            echo "::error::Add CALENDAR_WEB_APP_URL and STUDY_CALENDAR_TOKEN in Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+      - name: Ensure study calendar events exist
+        env:
+          CALENDAR_WEB_APP_URL: ${{ secrets.CALENDAR_WEB_APP_URL }}
+          STUDY_CALENDAR_TOKEN: ${{ secrets.STUDY_CALENDAR_TOKEN }}
+        run: |
+          set -euo pipefail
+          response=$(curl --fail --silent --show-error --location \
+            --request POST \
+            --data-urlencode "token=$STUDY_CALENDAR_TOKEN" \
+            "$CALENDAR_WEB_APP_URL")
+          echo "$response"
+          echo "$response" | grep -q '"ok":true' || {
+            echo "::error::Google Apps Script did not confirm calendar setup."
+            exit 1
+          }
