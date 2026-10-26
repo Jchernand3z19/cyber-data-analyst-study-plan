@@ -3,7 +3,7 @@ name: Sync study calendar
 on:
   workflow_dispatch:
   schedule:
-    # Weekly Sunday 15:00 UTC (09:00 Honduras): ensure recurring calendar series exist.
+    # Sunday 15:00 UTC = 09:00 Honduras; ensure recurring events exist.
     - cron: "0 15 * * 0"
 
 permissions:
@@ -13,27 +13,26 @@ jobs:
   sync-calendar:
     runs-on: ubuntu-latest
     steps:
-      - name: Validate calendar integration secrets
+      - name: Check required secrets
         env:
-          CALENDAR_WEB_APP_URL: ${{ secrets.CALENDAR_WEB_APP_URL }}
-          STUDY_CALENDAR_TOKEN: ${{ secrets.STUDY_CALENDAR_TOKEN }}
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_CALENDAR_ID: ${{ secrets.GOOGLE_CALENDAR_ID }}
         run: |
-          if [ -z "$CALENDAR_WEB_APP_URL" ] || [ -z "$STUDY_CALENDAR_TOKEN" ]; then
-            echo "::error::Add CALENDAR_WEB_APP_URL and STUDY_CALENDAR_TOKEN in Settings > Secrets and variables > Actions."
+          if [ -z "$GOOGLE_SERVICE_ACCOUNT_JSON" ] || [ -z "$GOOGLE_CALENDAR_ID" ]; then
+            echo "::error::Configure GOOGLE_SERVICE_ACCOUNT_JSON and GOOGLE_CALENDAR_ID in Settings > Secrets and variables > Actions."
             exit 1
           fi
-      - name: Ensure study calendar events exist
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check google-api-python-client google-auth
+
+      - name: Create or verify recurring study events
         env:
-          CALENDAR_WEB_APP_URL: ${{ secrets.CALENDAR_WEB_APP_URL }}
-          STUDY_CALENDAR_TOKEN: ${{ secrets.STUDY_CALENDAR_TOKEN }}
-        run: |
-          set -euo pipefail
-          response=$(curl --fail --silent --show-error --location \
-            --request POST \
-            --data-urlencode "token=$STUDY_CALENDAR_TOKEN" \
-            "$CALENDAR_WEB_APP_URL")
-          echo "$response"
-          echo "$response" | grep -q '"ok":true' || {
-            echo "::error::Google Apps Script did not confirm calendar setup."
-            exit 1
-          }
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_CALENDAR_ID: ${{ secrets.GOOGLE_CALENDAR_ID }}
+        run: python integrations/google-calendar/sync_calendar.py
