@@ -13,6 +13,10 @@ Construir un modelo analítico comprensible y verificable para PharmaTracker, co
 | 45–49 | RLS, privilegio mínimo, clasificación, anonimización y exportación | Matriz de acceso y revisión de riesgos |
 | 50–52 | Definiciones, accesibilidad y evaluación | Diccionario de métricas y reporte final |
 
+## Laboratorio con archivos CSV y medidas DAX
+
+Usa el [laboratorio de modelo analítico para Power BI](../../labs/phase-03-power-bi/README.md), que incluye tablas sintéticas y medidas de referencia para validar manualmente.
+
 ## Modelo sugerido
 
 Trabaja con datos sintéticos:
