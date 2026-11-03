@@ -14,6 +14,10 @@ Crear un pipeline pequeño y reproducible que reciba datos sintéticos o de una 
 | 26–30 | Esquemas, logging, pruebas, errores y linaje | Validaciones, pruebas y registro de ejecución |
 | 31–36 | Anomalías, integridad, pipeline y revisión | Pipeline reproducible con reporte de calidad |
 
+## Laboratorio ejecutable
+
+Complementa esta guía con el [laboratorio de validación de calidad de datos](../../labs/phase-02-data-quality/README.md), que incluye CSV sintético y un script Python reproducible.
+
 ## Laboratorio base
 
 Usa un archivo CSV sintético con campos:
