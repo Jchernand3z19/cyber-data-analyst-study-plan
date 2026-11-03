@@ -1,0 +1,10 @@
+timestamp_utc,event_type,user_alias,source_label,outcome,severity,request_id
+2026-10-02T08:00:00Z,authentication,analyst_a,synthetic-host-1,failure,low,R-001
+2026-10-02T08:01:00Z,authentication,analyst_a,synthetic-host-1,failure,low,R-002
+2026-10-02T08:02:00Z,authentication,analyst_a,synthetic-host-1,failure,low,R-003
+2026-10-02T08:03:00Z,authentication,analyst_a,synthetic-host-1,failure,low,R-004
+2026-10-02T08:04:00Z,authentication,analyst_a,synthetic-host-1,failure,low,R-005
+2026-10-02T08:05:00Z,authentication,analyst_b,synthetic-host-2,success,low,R-006
+2026-10-02T08:06:00Z,authentication,analyst_a,synthetic-host-1,failure,low,R-005
+2026-10-02T08:07:00Z,authentication,analyst_c,synthetic-host-3,failure,low,R-007
+invalid-time,authentication,analyst_d,synthetic-host-4,failure,low,R-008
