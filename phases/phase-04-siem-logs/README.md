@@ -13,6 +13,10 @@ Analizar eventos sintéticos, identificar patrones explicables, priorizar señal
 | 61–65 | Falsos positivos, enriquecimiento, correlación y priorización | Tabla de pruebas y razonamiento de riesgo |
 | 66–70 | Triage, conservación, minimización e investigación integrada | Informe de caso |
 
+## Laboratorio ejecutable
+
+Complementa esta guía con el [laboratorio de análisis de logs](../../labs/phase-04-log-analysis/README.md), que incluye eventos sintéticos y un script Python para aplicar una regla de detección didáctica.
+
 ## Esquema sintético de eventos
 
 Usa campos como:
