@@ -4,10 +4,13 @@ Los laboratorios complementan las guías de fase con ejercicios ejecutables. Tod
 
 ## Laboratorios disponibles
 
-| Fase | Laboratorio | Ejecución |
+| Fase | Laboratorio | Recursos |
 |---|---|---|
-| 2 | [Validación de calidad de datos](phase-02-data-quality/README.md) | Python 3, biblioteca estándar |
-| 4 | [Análisis básico de logs](phase-04-log-analysis/README.md) | Python 3, biblioteca estándar |
+| 1 | HTTP y SQL | [Guía y práctica SQLite](phase-01-http-sql/README.md) |
+| 2 | Python y calidad de datos | [Guía, CSV y validador](phase-02-data-quality/README.md) |
+| 3 | Power BI y modelo analítico | [Guía, CSV y medidas DAX](phase-03-power-bi/README.md) |
+| 4 | Logs y detección | [Guía, eventos sintéticos y analizador](phase-04-log-analysis/README.md) |
+| 5 | Gobierno y proyecto final | Los entregables y matrices se describen en la [guía de fase 5](../phases/phase-05-governance/README.md); se completan con evidencia del proyecto. |
 
 ## Reglas
 
@@ -16,3 +19,4 @@ Los laboratorios complementan las guías de fase con ejercicios ejecutables. Tod
 - Revisa los resultados y explica cada regla antes de considerarla útil.
 - Los scripts son material didáctico, no herramientas de producción ni productos SIEM.
 - Los resultados se generan en carpetas locales `output/`; no es necesario subirlos al repositorio.
+- No marques sesiones como aprobadas solo por ejecutar un script: completa también la explicación y evaluación de la sesión.
