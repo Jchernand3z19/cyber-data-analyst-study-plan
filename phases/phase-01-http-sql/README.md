@@ -14,6 +14,10 @@ Entender cómo viaja una solicitud entre cliente y servidor, cómo se representa
 | 12–16 | Consultas parametrizadas, inyección SQL, validación, privilegios y auditoría | Matriz riesgo-control con ejemplos seguros |
 | 17–18 | Integración y evaluación | Informe breve reproducible y respuestas de razonamiento |
 
+## Laboratorio ejecutable de SQL
+
+Practica consultas SQL en una base SQLite en memoria con el [laboratorio SQL seguro](../../labs/phase-01-http-sql/README.md). No se conecta a sistemas externos.
+
 ## Laboratorio A — HTTP sin riesgo
 
 Usa un navegador y una página pública que permita inspección normal, o trabaja con el ejemplo local de abajo. No escanees ni automatices peticiones contra sitios de terceros.
