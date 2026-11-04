@@ -1,6 +1,6 @@
-# Cyber Data Analyst Study Plan
+# Ruta de aprendizaje — Security Data Analyst
 
-Roadmap práctico de **90 días** para desarrollar competencias de **Security Data Analyst**, con énfasis en análisis de datos, calidad, seguridad, detección y gobierno. **PharmaTracker** funciona como proyecto integrador para aplicar los conceptos a un flujo de datos controlado.
+Ruta estructurada de **90 sesiones de aprendizaje**, más preparación inicial para desarrollar competencias de **Security Data Analyst**, con énfasis en análisis de datos, calidad, seguridad, detección y gobierno. **PharmaTracker** funciona como proyecto integrador para aplicar los conceptos a un flujo de datos controlado.
 
 > Este repositorio está orientado a analítica de seguridad y gobierno de datos. No es un curso de pentesting ni una ruta para desarrollar herramientas ofensivas. Las prácticas de seguridad se realizan con datos sintéticos, sistemas propios o recursos expresamente autorizados.
 
@@ -26,7 +26,7 @@ Al finalizar, deberías poder:
 
 ## Navegación rápida
 
-- [Tracker de las 90 sesiones](tracker.md) — fuente oficial del estado de cada día.
+- [Diseño operativo y preparación](curriculum/README.md) — herramientas, duración y estructura de cada sesión.\n- [Plan detallado de las 90 sesiones](curriculum/session-plan.md) — objetivos, recursos, prácticas y evidencias.\n- [Tracker de las 90 sesiones](tracker.md) — fuente oficial del estado de cada día.
 - [Lección del día 1](lessons/day-01-http-client-server.md) — primera sesión desarrollada paso a paso.
 - [Registros diarios](daily-logs/README.md) — formato y reglas para guardar evidencia aprobada.
 - [Laboratorios y scripts](labs/README.md) — prácticas reproducibles con datos sintéticos.
@@ -82,7 +82,7 @@ Si una sesión queda incompleta, se retoma antes de avanzar. No se inventan fech
 ├── integrations/
 │   └── google-calendar/     # Sincronización con Google Calendar
 ├── labs/                    # Laboratorios reproducibles y datos sintéticos
-├── lessons/                 # Lecciones desarrolladas por día
+├── lessons/                 # Lecciones desarrolladas por día\n├── curriculum/              # Diseño operativo y plan detallado de 90 sesiones
 ├── phases/                  # Guías, prácticas y entregables por fase
 └── tracker.md               # Seguimiento oficial de las 90 sesiones
 ```
