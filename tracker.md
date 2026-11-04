@@ -1,6 +1,6 @@
-# Tracker — 90 días
+# Tracker — 90 sesiones
 
-**Estado inicial:** todas las sesiones están pendientes. No marques una sesión como completada hasta que exista evidencia y se haya aprobado la evaluación.
+**Ritmo:** lunes a sábado, 08:00–09:30 (America/Tegucigalpa). La preparación del entorno se registra por separado y no cuenta dentro de estas 90 sesiones. Consulta el [plan detallado](curriculum/session-plan.md) para objetivos, recursos, prácticas y evidencias.\n\n**Estado inicial:** todas las sesiones están pendientes. No marques una sesión como completada hasta que exista evidencia y se haya aprobado la evaluación.
 
 ## Fase 1 — HTTP, web y fundamentos de seguridad (Días 1–18)
 - [ ] Día 01 — Cliente-servidor, HTTP y ciclo de una solicitud.
