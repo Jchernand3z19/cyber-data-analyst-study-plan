@@ -6,7 +6,7 @@
 
 Al terminar, podrás explicar cómo un cliente solicita un recurso, cómo un servidor responde y qué información se encuentra en los componentes principales de HTTP.
 
-## Plan de 60 minutos
+## Plan de 90 minutos
 
 - **10 min — Recuperación:** escribe lo que ya sabes sobre navegador, servidor y página web. Si no sabes algo, anótalo sin buscar la respuesta todavía.
 - **20 min — Estudio:** lee los conceptos y el ejemplo de abajo.
