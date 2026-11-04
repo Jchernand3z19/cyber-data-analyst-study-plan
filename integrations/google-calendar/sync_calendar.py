@@ -196,16 +196,16 @@ def main() -> None:
     )
     service = build("calendar", "v3", credentials=credentials, cache_discovery=False)
 
-    # Remove only the old program-owned recurring series. No unrelated events are touched.
-    removed = remove_legacy_series(service, calendar_id)
-    existing = existing_events(service, calendar_id)
-    already = set(existing)
-    anchor = anchor_from_existing(existing) or next_study_day()
-
     curriculum_path = Path(__file__).resolve().parents[2] / "curriculum" / "session-plan.md"
     sessions = parse_sessions(curriculum_path)
     items = [(item, "preparation") for item in SETUP]
     items.extend((item, "learning session") for item in sessions)
+
+    # Validate the complete curriculum before touching any existing calendar event.
+    removed = remove_legacy_series(service, calendar_id)
+    existing = existing_events(service, calendar_id)
+    already = set(existing)
+    anchor = anchor_from_existing(existing) or next_study_day()
     dates = list(study_dates(anchor, len(items)))
 
     created = 0
