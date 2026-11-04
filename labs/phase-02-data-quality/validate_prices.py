@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import csv
 import json
+import math
 from collections import Counter
 from datetime import datetime
 from pathlib import Path
@@ -34,7 +35,10 @@ def validate_row(row: dict[str, str]) -> list[str]:
     raw_price = (row.get("price") or "").strip()
     if raw_price:
         try:
-            if float(raw_price) <= 0:
+            numeric_price = float(raw_price)
+            if not math.isfinite(numeric_price):
+                errors.append("price_must_be_finite")
+            elif numeric_price <= 0:
                 errors.append("price_must_be_positive")
         except ValueError:
             errors.append("price_not_numeric")
