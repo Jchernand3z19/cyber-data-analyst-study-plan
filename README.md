@@ -89,6 +89,8 @@ Si una sesión queda incompleta, se retoma antes de avanzar. No se inventan fech
 
 ## Seguridad y uso responsable
 
+Consulta también la [política y lista de verificación de seguridad](SECURITY.md) antes de añadir archivos o cambiar permisos.
+
 - Utiliza únicamente datos públicos, sintéticos o cuyo uso esté autorizado.
 - No subas contraseñas, tokens, claves API, archivos de credenciales ni datos personales o confidenciales.
 - No escanees, ataques ni automatices pruebas contra sistemas de terceros sin autorización explícita.
