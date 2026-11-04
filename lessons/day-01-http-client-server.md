@@ -8,10 +8,11 @@ Al terminar, podrás explicar cómo un cliente solicita un recurso, cómo un ser
 
 ## Plan de 90 minutos
 
-- **10 min — Recuperación:** escribe lo que ya sabes sobre navegador, servidor y página web. Si no sabes algo, anótalo sin buscar la respuesta todavía.
-- **20 min — Estudio:** lee los conceptos y el ejemplo de abajo.
-- **20 min — Práctica:** analiza la solicitud y respuesta sintéticas y completa la tabla.
-- **10 min — Evidencia:** guarda tus respuestas y dudas en un borrador local para revisarlas. No marques el día como aprobado hasta superar la evaluación.
+- **10 min — Recuperación activa:** escribe lo que ya sabes sobre navegador, servidor y página web. Si no sabes algo, anótalo sin buscar la respuesta todavía.
+- **20 min — Estudio guiado:** lee los conceptos, consulta el recurso de MDN y analiza el ejemplo sintético.
+- **35 min — Práctica guiada:** analiza la solicitud y respuesta, completa la tabla y resuelve los seis ejercicios de aplicación.
+- **15 min — Práctica individual:** crea un segundo ejemplo de solicitud/respuesta con una ruta y parámetros diferentes; explica qué se puede y qué no se puede concluir.
+- **10 min — Evidencia y reflexión:** guarda la tabla, las respuestas, el segundo ejemplo y dos dudas. No marques la sesión como aprobada hasta superar la evaluación.
 
 ## Conceptos
 
