@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*service-account*.json
+*credentials*.json
+
+# Local lab outputs and generated data
+**/output/
+*.sqlite
+*.db
+
+# Editor and OS files
+.DS_Store
+.vscode/
+.idea/
