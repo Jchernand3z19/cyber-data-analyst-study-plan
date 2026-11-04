@@ -135,12 +135,14 @@ def event_body(item: dict, day: date, kind: str) -> dict:
 def list_events(service, calendar_id: str, *, title: str, single_events: bool):
     params = {
         "calendarId": calendar_id,
-        "timeMin": datetime.now(TZ).isoformat(),
-        "timeMax": (datetime.now(TZ) + timedelta(days=500)).isoformat(),
         "singleEvents": single_events,
-        "q": title,
         "maxResults": 2500,
     }
+    if title:
+        params["q"] = title
+    if single_events:
+        params["timeMin"] = datetime.now(TZ).isoformat()
+        params["timeMax"] = (datetime.now(TZ) + timedelta(days=500)).isoformat()
     while True:
         response = service.events().list(**params).execute()
         yield from response.get("items", [])
