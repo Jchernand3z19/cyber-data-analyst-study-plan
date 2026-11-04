@@ -9,9 +9,18 @@ This integration manages study sessions directly through the Google Calendar API
 - A popup reminder is planned for 10 minutes before each session.
 - The workflow is currently manual-only. Its scheduled trigger is intentionally paused until calendar access is verified and the migration is approved for execution.
 
-The sync script is prepared to replace only the two legacy recurring series marked `[SDA-WEEKDAYS]` and `[SDA-SATURDAY]`, then create three setup events and 90 individually titled sessions. Each event includes the objective, reading resource, practice, expected evidence and a 10-minute reminder. It uses stable markers to avoid duplicates and retains the original start date on retries.\n\n**Important:** the script deletes only those two program-owned recurring series. It does not touch unrelated events. The workflow's automatic schedule is paused; do not run it until the service-account sharing and permission have been confirmed.
+The sync script is prepared to replace only the two legacy recurring series marked `[SDA-WEEKDAYS]` and `[SDA-SATURDAY]`, then create three setup events and 90 individually titled sessions. Each event includes the objective, reading resource, practice, expected evidence and a 10-minute reminder. It uses stable markers to avoid duplicates and retains the original start date on retries.
 
-## Study schedule\n\n- Time zone: `America/Tegucigalpa`.\n- Time: 08:00–09:30, Monday through Saturday.\n- Each of the 90 sessions will carry its own topic, learning objective, resource link and practice summary from [`curriculum/session-plan.md`](../../curriculum/session-plan.md).\n- The three environment-preparation sessions are separate from the 90 learning sessions.\n\n## One-time Google setup
+**Important:** the script deletes only those two program-owned recurring series. It does not touch unrelated events. The workflow's automatic schedule is paused; do not run it until the service-account sharing and permission have been confirmed.
+
+## Study schedule
+
+- Time zone: `America/Tegucigalpa`.
+- Time: 08:00–09:30, Monday through Saturday.
+- Each of the 90 sessions will carry its own topic, learning objective, resource link and practice summary from [`curriculum/session-plan.md`](../../curriculum/session-plan.md).
+- The three environment-preparation sessions are separate from the 90 learning sessions.
+
+## One-time Google setup
 
 1. Open the [Google Cloud Console](https://console.cloud.google.com/).
 2. Create or select a project.
