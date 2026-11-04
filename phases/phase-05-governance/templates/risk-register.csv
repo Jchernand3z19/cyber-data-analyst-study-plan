@@ -1,0 +1,5 @@
+risk_id,asset_or_process,scenario,likelihood_1_to_5,impact_1_to_5,existing_controls,proposed_treatment,evidence,owner_role,residual_risk,status
+R-001,Data ingestion,Unauthorized or unapproved source is collected,2,4,Synthetic examples only,Document source permission before ingestion,No external source connected,Project owner,Medium,Open
+R-002,Repository,Credential is accidentally committed,2,5,GitHub Actions secrets and code review,Enable secret scanning and rotate exposed keys,Workflow reads secrets from environment,Repository owner,Medium,Open
+R-003,Analytics,Incorrect currency comparison distorts price metric,3,3,Currency field in sample data,Block aggregation across currencies unless converted with documented rate,Measure definitions pending,Analytics owner,Medium,Open
+R-004,Logs,Sensitive values are written to logs,2,5,Synthetic log samples,Use field allowlist and inspect log output,No production logs used,Security analyst,Low,Open
