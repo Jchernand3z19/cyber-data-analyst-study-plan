@@ -1,0 +1,3 @@
+dataset_id,data_category,purpose,retention_trigger,retention_period,authority_or_policy_reference,disposal_method,approval_role,status
+DS-001,Synthetic product catalog,Learning and analysis,Project completion,Not applicable - synthetic,Not applicable,Delete local copies when no longer needed,Project owner,Proposed
+DS-002,Synthetic price observations,Learning and analysis,Project completion,Not applicable - synthetic,Not applicable,Delete local copies when no longer needed,Project owner,Proposed
