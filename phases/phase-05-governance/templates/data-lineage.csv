@@ -1,0 +1,4 @@
+lineage_id,source_dataset,source_field,process_or_transformation,target_dataset,target_field,validation_rule,execution_evidence,status
+LIN-001,DS-001,product_id,Trim and validate identifier,DS-001,product_id,Required and unique,Not executed,Proposed
+LIN-002,DS-002,price,Parse decimal and reject non-positive values,Validated observations,price,Numeric and greater than zero,See phase-2 lab when executed,Proposed
+LIN-003,Validated observations,price,Aggregate average by product and store,Analytical model,average_price,Same currency and comparable observations,Not implemented,Proposed
