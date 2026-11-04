@@ -140,7 +140,7 @@ def list_events(service, calendar_id: str, *, title: str, single_events: bool):
     }
     if title:
         params["q"] = title
-    if single_events:
+    if single_events and title != "SDA-":
         params["timeMin"] = datetime.now(TZ).isoformat()
         params["timeMax"] = (datetime.now(TZ) + timedelta(days=500)).isoformat()
     while True:
@@ -163,15 +163,23 @@ def remove_legacy_series(service, calendar_id: str) -> int:
     return removed
 
 
-def existing_markers(service, calendar_id: str) -> set[str]:
-    markers = set()
-    for event in list_events(service, calendar_id, title="", single_events=True):
+def existing_events(service, calendar_id: str) -> dict[str, dict]:
+    found = {}
+    for event in list_events(service, calendar_id, title="SDA-", single_events=True):
         description = event.get("description", "")
         match = re.search(r"\[SDA-(?:SETUP-\d{2}|SESSION-\d{2})\]", description)
         if match:
-            markers.add(match.group(0))
-    return markers
+            found[match.group(0)] = event
+    return found
 
+
+def anchor_from_existing(events: dict[str, dict]) -> date | None:
+    starts = []
+    for event in events.values():
+        value = event.get("start", {}).get("dateTime")
+        if value:
+            starts.append(datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(TZ).date())
+    return min(starts) if starts else None
 
 def main() -> None:
     raw_credentials = os.environ.get("GOOGLE_SERVICE_ACCOUNT_JSON", "")
@@ -190,13 +198,15 @@ def main() -> None:
 
     # Remove only the old program-owned recurring series. No unrelated events are touched.
     removed = remove_legacy_series(service, calendar_id)
-    already = existing_markers(service, calendar_id)
+    existing = existing_events(service, calendar_id)
+    already = set(existing)
+    anchor = anchor_from_existing(existing) or next_study_day()
 
     curriculum_path = Path(__file__).resolve().parents[2] / "curriculum" / "session-plan.md"
     sessions = parse_sessions(curriculum_path)
     items = [(item, "preparation") for item in SETUP]
     items.extend((item, "learning session") for item in sessions)
-    dates = list(study_dates(next_study_day(), len(items)))
+    dates = list(study_dates(anchor, len(items)))
 
     created = 0
     skipped = 0
