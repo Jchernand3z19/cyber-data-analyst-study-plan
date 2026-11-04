@@ -15,7 +15,7 @@ Este documento registra controles recomendados y límites de verificación. No c
 Configuración recomendada para el propietario del repositorio:
 
 1. Mantener el repositorio **Private** mientras se revisa su contenido e historial.
-2. Habilitar Secret scanning y Push protection si están disponibles en el plan y para el repositorio.
+2. Para repositorios privados, comprobar la disponibilidad de Secret scanning y Push protection según el plan/licencia de GitHub. Si los controles no aparecen porque el plan no incluye GitHub Advanced Security, registrarlos como no disponibles; no asumir que están activos. En repositorios públicos, Secret scanning se habilita automáticamente según las condiciones de GitHub.
 3. Usar GitHub Actions con permisos mínimos. El workflow de Calendar declara `contents: read`.
 4. Revisar periódicamente Actions, colaboradores, tokens de acceso y aplicaciones autorizadas.
 5. No imprimir valores de secretos en logs. El enmascaramiento automático de GitHub es una defensa adicional, no una razón para imprimir secretos.
@@ -38,7 +38,7 @@ Configuración recomendada para el propietario del repositorio:
 | Las credenciales se leen desde variables de entorno de Actions | Revisado en el código |
 | El scope de Calendar se redujo a `calendar.events` | Cambio aplicado en código |
 | El repositorio está configurado como privado | Confirmado en GitHub: `visibility=private` (2026-11-03) |
-| Secret scanning y Push protection están activos | No verificado |
+| Secret scanning y Push protection | No habilitados/verificables en este repositorio privado sin la licencia correspondiente de GitHub Advanced Security; no se consideran controles activos |
 | Los valores de los secretos están correctos y no expuestos | No se inspeccionan ni deben compartirse |
 | No hay secretos en todo el historial Git | No certificado; requiere escaneo del historial |
 | Permisos efectivos del calendario compartido | Pendiente de revisar en Google Calendar |
