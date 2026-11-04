@@ -10,7 +10,7 @@ Los laboratorios complementan las guías de fase con ejercicios ejecutables. Tod
 | 2 | Python y calidad de datos | [Guía, CSV y validador](phase-02-data-quality/README.md) |
 | 3 | Power BI y modelo analítico | [Guía, CSV y medidas DAX](phase-03-power-bi/README.md) |
 | 4 | Logs y detección | [Guía, eventos sintéticos y analizador](phase-04-log-analysis/README.md) |
-| 5 | Gobierno y proyecto final | Los entregables y matrices se describen en la [guía de fase 5](../phases/phase-05-governance/README.md); se completan con evidencia del proyecto. |
+| 5 | Gobierno y proyecto final | [Guía de fase 5](../phases/phase-05-governance/README.md) y [plantillas de gobierno](../phases/phase-05-governance/templates/README.md). |
 
 ## Reglas
 
