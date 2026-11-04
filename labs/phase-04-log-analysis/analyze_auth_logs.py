@@ -35,6 +35,12 @@ def main() -> None:
             raise ValueError(f"Missing columns: {', '.join(sorted(missing))}")
 
         for line_number, row in enumerate(reader, start=2):
+            required_values = ("timestamp_utc", "event_type", "user_alias", "outcome", "request_id")
+            empty_fields = [field for field in required_values if not (row.get(field) or "").strip()]
+            if empty_fields:
+                rejected.append({"source_line": str(line_number), "request_id": (row.get("request_id") or "").strip(),
+                                 "reason": "missing_required_fields:" + ",".join(empty_fields)})
+                continue
             request_id = (row.get("request_id") or "").strip()
             if request_id and request_id in seen_ids:
                 rejected.append({"source_line": str(line_number), "request_id": request_id,
