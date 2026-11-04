@@ -1,0 +1,3 @@
+dataset_id,dataset_name,purpose,source_type,source_authorization,owner_role,custodian_role,contains_personal_data,classification,refresh_frequency,storage_location,retention_policy_ref,status,notes
+DS-001,synthetic_product_catalog,Analyze product attributes,Synthetic sample,Not applicable - synthetic,Data owner,Data steward,No,Public synthetic,Manual,Local project folder,Not applicable,Proposed,Example only
+DS-002,synthetic_price_observations,Analyze price changes,Synthetic sample,Not applicable - synthetic,Data owner,Data steward,No,Public synthetic,Manual,Local project folder,Not applicable,Proposed,Example only
