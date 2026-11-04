@@ -12,7 +12,7 @@ from googleapiclient.discovery import build
 
 TZ_NAME = "America/Tegucigalpa"
 TZ = ZoneInfo(TZ_NAME)
-SCOPES = ["https://www.googleapis.com/auth/calendar"]
+SCOPES = ["https://www.googleapis.com/auth/calendar.events"]
 TITLE = "Estudio Security Data Analyst"
 MARKER_WEEKDAYS = "[SDA-WEEKDAYS]"
 MARKER_SATURDAY = "[SDA-SATURDAY]"
@@ -99,7 +99,7 @@ def main() -> None:
             calendarId=calendar_id,
             body=event_body(start, marker, rrule),
         ).execute()
-        print(f"Created {marker}: {created.get('htmlLink', '(link unavailable)')}")
+        print(f"Created recurring series: {marker}")
 
     print(f"Calendar sync completed. Timezone={TZ_NAME}; schedule=Mon-Sat 19:00-20:00.")
 
