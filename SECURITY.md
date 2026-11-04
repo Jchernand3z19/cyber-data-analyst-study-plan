@@ -37,7 +37,7 @@ Configuración recomendada para el propietario del repositorio:
 | El workflow declara `contents: read` | Revisado en el archivo |
 | Las credenciales se leen desde variables de entorno de Actions | Revisado en el código |
 | El scope de Calendar se redujo a `calendar.events` | Cambio aplicado en código |
-| El repositorio está configurado como privado | No verificable desde esta revisión |
+| El repositorio está configurado como privado | Confirmado en GitHub: `visibility=private` (2026-11-03) |
 | Secret scanning y Push protection están activos | No verificado |
 | Los valores de los secretos están correctos y no expuestos | No se inspeccionan ni deben compartirse |
 | No hay secretos en todo el historial Git | No certificado; requiere escaneo del historial |
