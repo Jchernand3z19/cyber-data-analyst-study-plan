@@ -1,0 +1,5 @@
+dataset_id,field_name,description,data_type,nullable,classification,allowed_values_or_rule,source_field,transformation,required_for_purpose,example_value
+DS-001,product_id,Stable synthetic product identifier,String,No,Public synthetic,Pattern P-###,product_id,None,Yes,P-100
+DS-001,product_name,Display name for synthetic product,String,No,Public synthetic,Non-empty,product_name,Trim whitespace,Yes,Sample tablet
+DS-002,price,Observed price amount,Decimal,No,Public synthetic,Greater than zero,price,Parse decimal,Yes,125.50
+DS-002,observed_at,Observation timestamp UTC,Datetime,No,Public synthetic,ISO-8601 UTC,observed_at,Normalize timestamp,Yes,2026-01-15T12:00:00Z
