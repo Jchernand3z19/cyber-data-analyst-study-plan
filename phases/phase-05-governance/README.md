@@ -43,6 +43,10 @@ Para cada riesgo registra: activo o proceso, escenario, probabilidad, impacto, c
 - Define retención según necesidad, obligaciones aplicables y política autorizada.
 - No subas credenciales, información personal real ni datos confidenciales al repositorio público.
 
+## Plantillas de trabajo
+
+Usa el [kit de gobierno de datos](templates/README.md). Incluye inventario, diccionario de campos, matriz de acceso, linaje, reglas de calidad, registro de riesgos, retención y evidencia de controles. Los ejemplos son ficticios y los estados iniciales son propuestos, no controles ya implementados.
+
 ## Entregables finales
 
 - Diagrama de arquitectura y flujo de datos.
