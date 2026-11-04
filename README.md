@@ -35,7 +35,7 @@ Al finalizar, deberías poder:
 
 ## Progreso
 
-**Estado inicial del tracker:** 0 de 90 sesiones aprobadas. Las casillas solo se marcan después de completar la práctica, presentar evidencia y superar la evaluación. El número no se actualiza automáticamente: el tracker es el registro que debe mantenerse manualmente y con evidencia.
+**Estado actual del tracker:** consulta [tracker.md](tracker.md) para el avance real. El estado solo cambia con evidencia y evaluación. Las casillas solo se marcan después de completar la práctica, presentar evidencia y superar la evaluación. El registro se actualizará mediante el proceso de check-in y validación de evidencia que se definirá para cada sesión.
 
 | Fase | Sesiones | Estado |
 |---|---:|---|
@@ -51,15 +51,11 @@ Actualiza este resumen cuando cambie el estado de las sesiones en [tracker.md](t
 ## Rutina de estudio
 
 - **Días:** lunes a sábado.
-- **Horario:** 19:00–20:00, hora de Honduras (`America/Tegucigalpa`).
-- **Duración:** 60 minutos por sesión.
+- **Horario:** 08:00–09:30, hora de Honduras (`America/Tegucigalpa`).
+- **Duración:** 90 minutos por sesión.
+- **Preparación:** 3 sesiones iniciales independientes de las 90 sesiones académicas.
 
-Distribución sugerida:
-
-1. 10 min — repaso y recuperación de conocimientos previos.
-2. 20 min — explicación y estudio del tema.
-3. 20 min — práctica guiada o laboratorio.
-4. 10 min — evidencia, reflexión y dudas.
+Distribución: 10 min de recuperación activa, 20 min de estudio, 35 min de práctica guiada, 15 min de ejercicio individual y 10 min para evidencia y dudas. Consulta el [diseño operativo](curriculum/README.md).
 
 Los recordatorios de Google Calendar se crean mediante GitHub Actions. La automatización administra eventos; no marca lecciones como completadas ni evalúa el aprendizaje.
 
