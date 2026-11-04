@@ -27,7 +27,11 @@ Si la instalación o una dificultad técnica consume tiempo, no se recorta la pr
 | P2 — Herramientas base | Verificar Python, editor, Git, navegador y cliente SQLite; instalar solo lo que falte. | Versiones comprobadas y prueba mínima ejecutada. |
 | P3 — Accesos y entorno de práctica | Revisar acceso a Google Calendar, GitHub Actions y recursos de aprendizaje; preparar datos sintéticos. | Prueba local reproducible; secretos fuera del repositorio. |
 
-**Compatibilidad importante:** Power BI Desktop es una aplicación para Windows y no se instala de forma nativa en macOS. Antes de llegar a la fase 3 se decidirá una vía realista: equipo Windows/entorno Windows disponible o alternativa de práctica compatible, sin fingir que Power BI Desktop funciona en el Mac.
+**Compatibilidad importante:** Power BI Desktop requiere Windows. Se utilizará un entorno Windows virtualizado en el Mac. La preparación P3 deberá comprobar que Power BI Desktop se instala y ejecuta correctamente, que el rendimiento permite trabajar con los archivos del curso y que se dispone de la licencia/cuenta necesaria para las funciones que se practicarán. No se dará por resuelto hasta completar esa prueba.
+
+## Auditoría y control de calidad
+
+La ruta está en auditoría pedagógica y técnica. Se revisarán objetivos, secuencia, recursos, tiempos, prácticas, evidencias, evaluaciones, laboratorios y dependencias de herramientas. El calendario permanece pausado hasta aprobar la revisión. Las correcciones se registrarán en el repositorio antes de preparar los eventos.
 
 ## Ruta de las 90 sesiones
 
