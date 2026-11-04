@@ -4,8 +4,7 @@ This integration manages study sessions directly through the Google Calendar API
 
 ## Schedule
 
-- Monday-Friday: 19:00-20:00
-- Saturday: 19:00-20:00
+- Monday-Saturday: 08:00-09:30
 - Time zone: `America/Tegucigalpa`
 - A popup reminder is planned for 10 minutes before each session.
 - The workflow is currently manual-only. Its scheduled trigger is intentionally paused until calendar access is verified and the migration is approved for execution.
@@ -27,7 +26,7 @@ The sync script is prepared to replace only the two legacy recurring series mark
 
 ## Configure GitHub Actions secrets
 
-Open the repository's [Actions secrets settings](https://github.com/Jchernand3z19/cyber-data-analyst-study-plan/settings/secrets/actions) and verify these are already configured (never paste their values into chat):
+Open the repository's [Actions secrets settings](https://github.com/Jchernand3z19/security-data-analyst-learning-path/settings/secrets/actions) and verify these are already configured (never paste their values into chat):
 
 - `GOOGLE_SERVICE_ACCOUNT_JSON`: the entire contents of the downloaded service-account JSON key file.
 - `GOOGLE_CALENDAR_ID`: the calendar ID for the calendar shared with the service account.
@@ -36,7 +35,7 @@ Do not put either value in repository files, issues, commits, or chat.
 
 ## Test
 
-Open the [Sync study calendar workflow](https://github.com/Jchernand3z19/cyber-data-analyst-study-plan/actions/workflows/sync-study-calendar.yml), choose **Run workflow**, and inspect the run logs. Run the workflow only after the migration logic has been reviewed and the calendar has been verified. A successful run must report created, updated and skipped items without printing credentials.
+Open the [Sync study calendar workflow](https://github.com/Jchernand3z19/security-data-analyst-learning-path/actions/workflows/sync-study-calendar.yml), choose **Run workflow**, and inspect the run logs. Run the workflow only after the migration logic has been reviewed and the calendar has been verified. A successful run must report created, updated and skipped items without printing credentials.
 
 ## Security
 
