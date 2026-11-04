@@ -1,0 +1,4 @@
+rule_id,dataset_id,field_or_scope,dimension,rule,threshold_or_acceptance,severity,owner_role,test_method,status
+DQ-001,DS-001,product_id,Completeness,Product identifier must be present,100 percent,High,Data steward,Required-field validation,Proposed
+DQ-002,DS-002,price,Validity,Price must be numeric and positive,100 percent of accepted rows,High,Data steward,Python validation lab,Proposed
+DQ-003,DS-002,product_id+store_id+observed_at,Uniqueness,No duplicate observation business key,Zero duplicates in accepted rows,Medium,Data steward,Duplicate-key check,Proposed
