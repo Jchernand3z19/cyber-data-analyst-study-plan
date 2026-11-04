@@ -1,18 +1,18 @@
 # Google Calendar integration (Python + GitHub Actions)
 
-This integration creates recurring study sessions directly through the Google Calendar API. It does not use Google Apps Script.
+This integration manages study sessions directly through the Google Calendar API using Python and GitHub Actions. It does not use Google Apps Script.
 
 ## Schedule
 
 - Monday-Friday: 19:00-20:00
 - Saturday: 19:00-20:00
 - Time zone: `America/Tegucigalpa`
-- A popup reminder is set for 10 minutes before each session.
+- A popup reminder is planned for 10 minutes before each session.
 - The workflow can be run manually and also checks weekly on Sunday.
 
-The sync searches upcoming events for a series marker before creating a recurring series, so repeated runs should not create duplicates.
+The intended final calendar will contain individually titled sessions with their topic, resource and practice. The existing recurring reminders must be migrated carefully; do not run a create-only sync beside the old series, because that would create overlapping events. The migration will be enabled only after the calendar permission and current event state are verified.
 
-## One-time Google setup
+## Study schedule\n\n- Time zone: `America/Tegucigalpa`.\n- Time: 08:00–09:30, Monday through Saturday.\n- Each of the 90 sessions will carry its own topic, learning objective, resource link and practice summary from [`curriculum/session-plan.md`](../../curriculum/session-plan.md).\n- The three environment-preparation sessions are separate from the 90 learning sessions.\n\n## One-time Google setup
 
 1. Open the [Google Cloud Console](https://console.cloud.google.com/).
 2. Create or select a project.
@@ -36,7 +36,7 @@ Do not put either value in repository files, issues, commits, or chat.
 
 ## Test
 
-Open the [Sync study calendar workflow](https://github.com/Jchernand3z19/cyber-data-analyst-study-plan/actions/workflows/sync-study-calendar.yml), choose **Run workflow**, and inspect the run logs. A successful run prints whether each recurring series was created or already existed.
+Open the [Sync study calendar workflow](https://github.com/Jchernand3z19/cyber-data-analyst-study-plan/actions/workflows/sync-study-calendar.yml), choose **Run workflow**, and inspect the run logs. Run the workflow only after the migration logic has been reviewed and the calendar has been verified. A successful run must report created, updated and skipped items without printing credentials.
 
 ## Security
 
