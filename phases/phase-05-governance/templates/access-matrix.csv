@@ -1,0 +1,4 @@
+resource,role,permission,business_justification,approval_role,review_frequency,status,evidence_reference
+Synthetic CSV samples,Analyst,Read,Perform analysis,Data owner,Quarterly,Proposed,Not implemented
+Synthetic project outputs,Analyst,Write,Create derived analysis outputs,Data owner,Quarterly,Proposed,Not implemented
+Repository secrets,Study maintainer,Administer through platform secret settings,Maintain automation without exposing values,Repository owner,On change and periodic review,Proposed,Do not record secret values
