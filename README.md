@@ -89,6 +89,10 @@ Los **90 minutos son el bloque de aprendizaje, no la jornada completa**. La estr
 | 4 | 53–70 | Logs y análisis de datos de seguridad | [Fase 4](phases/phase-04-siem-logs/README.md) |
 | 5 | 71–90 | Gobierno, privacidad y reporting | [Fase 5](phases/phase-05-governance/README.md) |
 
+## Estado del trabajo
+
+**Sprint 1: COMPLETO.** La semana operativa de siete días, las etiquetas fijas y las estimaciones por fase están actualizadas. No se inicia Sprint 2 en este cambio.
+
 ## Diagnóstico del programa
 
 - **SIEM:** Splunk Cloud Trial queda descartado como solución única porque no es local ni reproducible sin coste. La herramienta no está decidida. Wazuh (local, open source) y ELK (local, open source) siguen como candidatas; falta prueba real de instalación y consumo de recursos.
