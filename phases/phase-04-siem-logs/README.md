@@ -22,6 +22,15 @@ Splunk Cloud Trial queda descartado como solución única porque no es local ni 
 
 No se activa una cuenta trial ni se declara compatible una plataforma antes de probarla. Mientras la decisión está pendiente, se pueden estudiar los datasets y scripts locales de esta fase sin afirmar que se ha utilizado un SIEM.
 
+## Bloque Sprint 2 — sesiones de datos
+
+- Sesiones 53–54: vocabulario MITRE ATT&CK para clasificar eventos sintéticos. Evidencia: tabla log→técnica, confianza, justificación y datos faltantes. No se crean reglas.
+- Sesiones 55–58: ingesta, consultas, perfilado de calidad y dashboard. Solo se usa SIEM si la instalación/ingesta quedó validada; mientras esté pendiente se usa JSON/CSV/SQLite local sin afirmar uso de SIEM.
+- Sesión 69: triage como estructura documental, con ticket sintético y análisis de datos faltantes/sobrantes. No hay respuesta activa.
+- [Laboratorio ATT&CK](../../labs/phase-04-log-analysis/attack-context.md)
+- [Plantilla de ticket de triage](../../labs/phase-04-log-analysis/triage-data-template.md)
+- [Quiz Fase 4](../../assessments/phase-4-quiz.md) · [Debug Fase 4](../../assessments/phase-4-debug.md)
+
 ## Laboratorios y datos
 
 - [Laboratorio de análisis de logs](../../labs/phase-04-log-analysis/README.md): eventos sintéticos y análisis reproducible con Python.
