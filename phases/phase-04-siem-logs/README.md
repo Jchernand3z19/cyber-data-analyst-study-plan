@@ -1,5 +1,8 @@
 # Fase 4 — Logs y análisis de datos de seguridad
 
+> **Aviso de fase:** Día 1 incluye instalación (~1 h extra), el resto no. Si no se requiere instalar una herramienta en esta fase, utiliza ese tiempo para verificar versiones y abrir los archivos de práctica.
+
+
 ## Objetivo
 
 Analizar datos sintéticos de eventos para producir consultas, tablas agregadas, métricas de calidad e informes reproducibles. El dato es el objetivo; la seguridad es el dominio de aplicación.
