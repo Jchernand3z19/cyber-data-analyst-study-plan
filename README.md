@@ -29,22 +29,34 @@ El dato es el objetivo; la seguridad es el dominio de aplicación. Las práctica
 
 Estos diez minutos sirven para orientarte y abrir el material; las instalaciones se realizan en los puntos indicados abajo y pueden requerir tiempo adicional.
 
-## Semana base
+## Semana base — 7 días
 
-La distribución solicitada suma ocho bloques (4 normales + 1 laboratorio + 1 repaso + 2 libres), por lo que se organiza como un **ciclo de 8 días**, no como una semana de siete días. Los días libres son descanso real.
+La semana operativa es fija y sigue el calendario de lunes a domingo:
 
-| Bloque | Tipo | Actividad |
+| Día | Tipo | Actividad |
 |---|---|---|
-| 1 | Normal | Sesión regular |
-| 2 | Normal | Sesión regular |
-| 3 | Laboratorio — miércoles | Laboratorio práctico; reemplaza la sesión normal, no se suma |
-| 4 | Normal | Sesión regular |
-| 5 | Normal | Sesión regular |
-| 6 | Repaso — sábado | Consolidación y evidencia de datos; reemplaza la sesión normal |
-| 7 | Libre — no tocar | Descanso |
-| 8 | Libre — no tocar | Descanso |
+| Lunes | Normal | Sesión regular (90 min) |
+| Martes | Normal | Sesión regular (90 min) |
+| Miércoles | Laboratorio o normal | Laboratorio práctico si la fase lo tiene; si no, sesión normal (90 min). El laboratorio reemplaza una sesión normal, no se suma |
+| Jueves | Normal | Sesión regular (90 min) |
+| Viernes | **Libre — no tocar** | Descanso |
+| Sábado | Repaso | Consolidación y revisión de evidencias (45–60 min) |
+| Domingo | **Libre — no tocar** | Descanso |
 
-Los rótulos miércoles y sábado son anclas de tipo de actividad; al aplicar el ciclo de ocho bloques, no se debe forzar que coincidan con una semana calendario. Los laboratorios reemplazan bloques normales, nunca se añaden como carga extra. En Fase 4, máximo dos laboratorios por semana y nunca en días consecutivos.
+Cada semana contiene cuatro bloques de avance curricular de lunes a jueves. El laboratorio ocupa el bloque del miércoles y reemplaza la sesión normal prevista para ese día; nunca se añade como una quinta sesión. El sábado es exclusivamente de repaso y no añade una sesión nueva al conteo de las 90. Nunca se programan dos laboratorios seguidos. En Fase 4, máximo dos laboratorios por semana. Los días libres no se utilizan para recuperar ni adelantar contenido.
+
+## Duración estimada por fase
+
+Estimación basada en cuatro sesiones curriculares por semana (lunes a jueves); el repaso del sábado no cuenta como sesión nueva. Las fracciones indican semanas parciales de calendario y pueden variar si hay pausas o si se repiten sesiones.
+
+| Fase | Sesiones | Estimación con semana de 7 días |
+|---|---:|---:|
+| 1 | 18 | 4.5 semanas |
+| 2 | 18 | 4.5 semanas |
+| 3 | 16 | 4 semanas |
+| 4 | 18 | 4.5 semanas |
+| 5 | 20 | 5 semanas |
+| **Total** | **90** | **22.5 semanas** |
 
 ## Instalación
 
@@ -57,7 +69,7 @@ La instalación se concentra en el primer día de cada etapa que la necesita:
 
 ## Tiempo realista
 
-Los **90 minutos son el bloque de aprendizaje, no la jornada completa**. La estructura es 10/20/35/15/10 minutos: recuperación, explicación, práctica guiada, ejercicio individual y evidencia/reflexión. Añade **+setup/evidencia si aplica**. El primer día de una fase puede requerir aproximadamente una hora adicional de instalación; no se debe recortar la práctica para aparentar que terminó en 90 minutos.
+Los **90 minutos son el bloque de aprendizaje, no la jornada completa**. La estructura es 10/20/35/15/10 minutos: recuperación, explicación, práctica guiada, ejercicio individual y evidencia/reflexión. Añade **+setup/evidencia si aplica**. El primer día de una fase puede requerir aproximadamente una hora adicional de instalación; no se debe recortar la práctica para aparentar que terminó en 90 minutos. El repaso de los sábados dura 45–60 minutos.
 
 ## Coste total
 
