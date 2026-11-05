@@ -1,6 +1,6 @@
 # Auditoría de las 90 sesiones
 
-**Estado:** revisión estructural realizada; ejecución de laboratorios y validación de plataforma SIEM pendientes.  
+**Estado:** auditoría estructural y documental completada; faltan pruebas ejecutadas en el entorno del estudiante y verificación de enlaces externos.  
 **Calendario:** pausado. No sincronizar ni programar sesiones hasta cerrar las puertas de preparación y las decisiones técnicas.
 
 ## Resultado de revisión estructural
@@ -39,8 +39,8 @@ Se revisaron los objetivos, recursos, prácticas y evidencias del plan de sesion
 2. Completar P3: verificar Windows virtualizado y Power BI Desktop real en el Mac; documentar rendimiento y licencia.
 3. Ejecutar los cuatro laboratorios desde cero y registrar salidas; verificar que los resultados esperados coinciden con los datasets.
 4. Completar comprobación de enlaces externos y revisar permisos/visibilidad del repositorio antes de publicar datos de práctica.
-5. Revisar el workflow de Calendar; el script ahora opera en modo dry-run por defecto y exige confirmación explícita para borrar series heredadas o crear eventos.
-6. Después de esos pasos, actualizar tracker/guías y decidir con el usuario si se reactiva el calendario.
+5. El workflow de Calendar y su script se revisaron estáticamente; el script opera en dry-run por defecto y exige confirmación explícita para borrar series heredadas o crear eventos. No ejecutar sincronización hasta aprobación final.
+6. Tras las pruebas locales y la verificación de enlaces, cerrar el dictamen y pedir autorización explícita antes de reactivar el calendario.
 
 ## Dictamen
 
