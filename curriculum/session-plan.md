@@ -1,6 +1,6 @@
 # Plan detallado de sesiones — Security Data Analyst
 
-Cada sesión dura 90 minutos. Sigue la estructura general del [diseño operativo](README.md). Las prácticas usan datos sintéticos y entornos propios/autorizados. No avances si no puedes explicar el resultado.
+Cada sesión curricular dura 90 minutos. La semana operativa es: lunes Normal, martes Normal, miércoles Laboratorio (o Normal si la fase no tiene lab), jueves Normal, viernes **Libre — no tocar**, sábado Repaso (45–60 min) y domingo **Libre — no tocar**. El laboratorio reemplaza la sesión normal del miércoles, nunca se suma; el repaso no añade una sesión al conteo de las 90. Sigue la estructura general del [diseño operativo](README.md). Las prácticas usan datos sintéticos y entornos propios/autorizados. No avances si no puedes explicar el resultado.
 
 ## Fase 1 — Redes, HTTP, identidad, SQL y fundamentos de seguridad
 
