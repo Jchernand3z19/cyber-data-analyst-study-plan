@@ -1,5 +1,8 @@
 # Fase 1 — Redes, HTTP, identidad, SQL y fundamentos de seguridad
 
+> **Aviso de fase:** Día 1 incluye instalación (~1 h extra), el resto no. Si no se requiere instalar una herramienta en esta fase, utiliza ese tiempo para verificar versiones y abrir los archivos de práctica.
+
+
 ## Objetivo
 
 Entender cómo viaja una solicitud entre cliente y servidor, cómo se representan los datos web y cómo consultar una base relacional de forma segura. El resultado es poder explicar riesgos y controles con evidencia, no atacar sistemas reales.
