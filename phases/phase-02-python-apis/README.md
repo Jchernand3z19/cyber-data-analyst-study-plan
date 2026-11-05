@@ -1,5 +1,8 @@
 # Fase 2 — Python, APIs y calidad de datos
 
+> **Aviso de fase:** Día 1 incluye instalación (~1 h extra), el resto no. Si no se requiere instalar una herramienta en esta fase, utiliza ese tiempo para verificar versiones y abrir los archivos de práctica.
+
+
 ## Objetivo
 
 Crear un pipeline pequeño y reproducible que reciba datos sintéticos o de una API pública autorizada, los valide, transforme y registre resultados sin filtrar secretos ni información sensible.
