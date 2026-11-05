@@ -4,7 +4,7 @@
 
 **Estado inicial:** todas las sesiones están pendientes. No marques una sesión como completada hasta que exista evidencia y se haya aprobado la evaluación.
 
-## Fase 1 — HTTP, web y fundamentos de seguridad (Días 1–18)
+## Fase 1 — Redes, HTTP, identidad, SQL y fundamentos de seguridad (Días 1–18)
 - [ ] Día 01 — Cliente-servidor, HTTP y ciclo de una solicitud.
 - [ ] Día 02 — Métodos HTTP, códigos de estado y cabeceras.
 - [ ] Día 03 — Redes básicas, DNS y recorrido de una solicitud web.
@@ -63,14 +63,14 @@
 - [ ] Día 52 — Evaluación de fase y revisión del modelo.
 
 ## Fase 4 — Logs, detección y fundamentos SIEM (Días 53–70)
-- [ ] Día 53 — Qué son los logs y por qué importan.
-- [ ] Día 54 — Timestamps, zonas horarias y correlación.
-- [ ] Día 55 — Niveles de severidad y campos estructurados.
-- [ ] Día 56 — Distinguir eventos, alertas e incidentes.
-- [ ] Día 57 — Patrones de autenticación fallida en datos sintéticos.
+- [ ] Día 53 — Logs e ingesta del dataset sintético en SIEM.
+- [ ] Día 54 — Timestamps y rango temporal en SIEM.
+- [ ] Día 55 — Campos extraídos y calidad de eventos en SIEM.
+- [ ] Día 56 — Distinguir eventos, alertas e incidentes en SIEM.
+- [ ] Día 57 — Búsqueda SPL de autenticaciones fallidas.
 - [ ] Día 58 — Indicadores de entrada sospechosa sin explotar sistemas.
-- [ ] Día 59 — Consultas de filtrado y agregación sobre logs.
-- [ ] Día 60 — Detección de anomalías con reglas explicables.
+- [ ] Día 59 — Consultas SPL de filtrado y agregación.
+- [ ] Día 60 — Detección temporal con SPL y ventana móvil.
 - [ ] Día 61 — Falsos positivos y ajuste de reglas.
 - [ ] Día 62 — Enriquecimiento y contexto de eventos.
 - [ ] Día 63 — Correlación temporal básica.
