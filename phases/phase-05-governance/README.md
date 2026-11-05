@@ -1,5 +1,8 @@
 # Fase 5 — Gobierno, privacidad y proyecto final
 
+> **Aviso de fase:** Día 1 incluye instalación (~1 h extra), el resto no. Si no se requiere instalar una herramienta en esta fase, utiliza ese tiempo para verificar versiones y abrir los archivos de práctica.
+
+
 ## Objetivo
 
 Demostrar que PharmaTracker puede describirse y revisarse como un flujo de datos controlado: fuentes, propósito, clasificación, calidad, acceso, retención, trazabilidad y riesgos documentados.
