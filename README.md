@@ -61,7 +61,7 @@ Los **90 minutos son el bloque de aprendizaje, no la jornada completa**. La estr
 
 ## Coste total
 
-**Coste de software previsto: 0 €**, utilizando herramientas gratuitas y alternativas open-source. No se presupuestan licencias de pago ni trials como dependencia del curso. El coste de hardware, electricidad y conexión a internet no está incluido. La selección final de SIEM queda abierta entre Wazuh y ELK y no se considera validada hasta probar instalación y consumo de recursos.
+**Coste total previsto de software: 0 €**, utilizando herramientas gratuitas y alternativas open-source. No se presupuestan licencias de pago ni trials como dependencia del curso. El coste de hardware, electricidad y conexión a internet no está incluido. La selección final de SIEM queda abierta entre Wazuh y ELK y no se considera validada hasta probar instalación y consumo de recursos.
 
 ## Frase guía
 
