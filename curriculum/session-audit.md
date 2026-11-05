@@ -39,9 +39,9 @@ Se revisaron los objetivos, recursos, prácticas y evidencias del plan de sesion
 2. Completar P3: verificar Windows virtualizado y Power BI Desktop real en el Mac; documentar rendimiento y licencia.
 3. Ejecutar los cuatro laboratorios desde cero y registrar salidas; verificar que los resultados esperados coinciden con los datasets.
 4. Completar comprobación de enlaces externos y revisar permisos/visibilidad del repositorio antes de publicar datos de práctica.
-5. Revisar el workflow de Calendar y su configuración sin ejecutar sincronización hasta la aprobación.
+5. Revisar el workflow de Calendar; el script ahora opera en modo dry-run por defecto y exige confirmación explícita para borrar series heredadas o crear eventos.
 6. Después de esos pasos, actualizar tracker/guías y decidir con el usuario si se reactiva el calendario.
 
 ## Dictamen
 
-**No aprobado todavía para calendario.** La estructura general de 90 sesiones es aprovechable y no requiere aumentar duración por defecto, pero la experiencia SIEM real y la validación de Power BI son dependencias críticas. Mantener todas las sesiones pendientes hasta que el estudiante complete sus prácticas.
+**No aprobado todavía para calendario.** La estructura general de 90 sesiones es aprovechable y no requiere aumentar duración por defecto. Las dependencias críticas son la validación de Power BI, la prueba real de Splunk y la ejecución de los laboratorios. La sincronización de calendario tiene ahora protección de dry-run por defecto. Mantener todas las sesiones pendientes hasta que el estudiante complete sus prácticas.
