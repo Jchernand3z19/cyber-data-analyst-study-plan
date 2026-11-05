@@ -27,7 +27,8 @@ Al finalizar, deberías poder:
 ## Navegación rápida
 
 - [Diseño operativo y preparación](curriculum/README.md) — herramientas, duración y estructura de cada sesión.
-- [Plan detallado de las 90 sesiones](curriculum/session-plan.md) — objetivos, recursos, prácticas y evidencias.\n- [Tracker de las 90 sesiones](tracker.md) — fuente oficial del estado de cada día.
+- [Plan detallado de las 90 sesiones](curriculum/session-plan.md) — objetivos, recursos, prácticas y evidencias.
+- [Tracker de las 90 sesiones](tracker.md) — fuente oficial del estado de cada día.
 - [Lección del día 1](lessons/day-01-http-client-server.md) — primera sesión desarrollada paso a paso.
 - [Registros diarios](daily-logs/README.md) — formato y reglas para guardar evidencia aprobada.
 - [Laboratorios y scripts](labs/README.md) — prácticas reproducibles con datos sintéticos.
