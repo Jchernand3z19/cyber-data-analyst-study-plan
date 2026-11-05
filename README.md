@@ -16,6 +16,13 @@ Es un programa **INTRODUCTORIO**. No garantiza empleabilidad, no sustituye exper
 
 El dato es el objetivo; la seguridad es el dominio de aplicación. Las prácticas usan datos sintéticos, públicos o expresamente autorizados. Cada sesión relacionada con seguridad debe terminar en una evidencia de datos: consulta, tabla, dashboard o informe. No se pide producir reglas operativas, playbooks ni respuestas a incidentes.
 
+## Cómo empezar
+
+1. Clona el repositorio: `git clone https://github.com/Jchernand3z19/security-data-analyst-learning-path.git`
+2. Entra en la carpeta: `cd security-data-analyst-learning-path`
+3. Lee la guía de [Fase 0](phases/phase-00-foundations/README.md) y realiza el diagnóstico inicial.
+4. Abre el [plan detallado](curriculum/session-plan.md) y registra evidencia únicamente después de realizar la práctica.
+
 ## Estado del trabajo
 
 **Sprint 1: CERRADO Y APROBADO. Sprint 2: CERRADO — documentación y evaluación actualizadas; Wazuh 4.9.0 validado físicamente con ingesta real de un log SSH sintético. Sprint 3: NO INICIADO.**
