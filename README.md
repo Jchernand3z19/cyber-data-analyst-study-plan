@@ -80,6 +80,18 @@ Se priorizan herramientas gratuitas y open-source. Wazuh 4.9.0 es la plataforma 
 
 Cada fase tiene quiz y debugging. La Fase 4 tiene una evaluación adaptada al caso real de Wazuh: 10 preguntas y 1 ejercicio de debugging. La rúbrica común se aplica a las evidencias de todas las fases.
 
+## Checklist de aceptación — Sprint 2
+
+- [x] Wazuh 4.9.0 Single-node instalado y validado en Docker Desktop/macOS Apple Silicon.
+- [x] Registrar recursos reales y resultado de ingesta: ~2.9 GB RAM, CPU <4%, regla 5710/nivel 5 y MITRE T1110.001.
+- [x] Mantener ELK como pendiente / descartado por recursos, sin afirmar benchmark no realizado.
+- [x] Integrar el caso SSH en sesiones ATT&CK y SIEM, con campos `srcip`, `srcuser` y `rule.mitre.id`.
+- [x] Publicar quiz Fase 4 de 10 preguntas y un ejercicio de debugging.
+- [x] Aplicar la rúbrica común a la evidencia de Fase 4 y mantener la rúbrica de todas las fases.
+- [x] Mantener Sprint 3 sin iniciar.
+
+**Nota:** el tiempo exacto de instalación de Wazuh no fue registrado; queda como dato no disponible, no como criterio que se haya medido.
+
 ## Navegación
 
 - [Plan detallado de las 90 sesiones](curriculum/session-plan.md)
