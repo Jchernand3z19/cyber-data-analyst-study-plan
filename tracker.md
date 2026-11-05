@@ -1,15 +1,17 @@
 # Tracker — 90 sesiones
 
-**Ritmo:** lunes a sábado, 08:00–09:30 (America/Tegucigalpa). La preparación del entorno se registra por separado y no cuenta dentro de estas 90 sesiones. Consulta el [plan detallado](curriculum/session-plan.md) para objetivos, recursos, prácticas y evidencias.\n\n**Estado inicial:** todas las sesiones están pendientes. No marques una sesión como completada hasta que exista evidencia y se haya aprobado la evaluación.
+**Ritmo:** lunes a sábado, 08:00–09:30 (America/Tegucigalpa). La preparación del entorno se registra por separado y no cuenta dentro de estas 90 sesiones. Consulta el [plan detallado](curriculum/session-plan.md) para objetivos, recursos, prácticas y evidencias.
+
+**Estado inicial:** todas las sesiones están pendientes. No marques una sesión como completada hasta que exista evidencia y se haya aprobado la evaluación.
 
 ## Fase 1 — HTTP, web y fundamentos de seguridad (Días 1–18)
 - [ ] Día 01 — Cliente-servidor, HTTP y ciclo de una solicitud.
 - [ ] Día 02 — Métodos HTTP, códigos de estado y cabeceras.
-- [ ] Día 03 — URLs, parámetros de consulta, codificación y formularios.
-- [ ] Día 04 — Cookies, sesiones y autenticación: conceptos.
-- [ ] Día 05 — JSON, HTML y estructura básica de respuestas web.
-- [ ] Día 06 — Herramientas del navegador y DevTools para inspección autorizada.
-- [ ] Día 07 — Repaso acumulativo y diagnóstico de HTTP.
+- [ ] Día 03 — Redes básicas, DNS y recorrido de una solicitud web.
+- [ ] Día 04 — Identificación, autenticación y autorización.
+- [ ] Día 05 — Cookies, sesiones y seguridad de sesión.
+- [ ] Día 06 — JSON, HTML y estructura básica de respuestas web.
+- [ ] Día 07 — DevTools e integración de fundamentos web.
 - [ ] Día 08 — SQL relacional: tablas, filas, claves y tipos.
 - [ ] Día 09 — SELECT, WHERE, ORDER BY y LIMIT.
 - [ ] Día 10 — JOIN y relaciones entre tablas.
