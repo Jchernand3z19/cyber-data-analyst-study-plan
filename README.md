@@ -91,7 +91,7 @@ Los **90 minutos son el bloque de aprendizaje, no la jornada completa**. La estr
 
 ## Estado del trabajo
 
-**Sprint 1: COMPLETO.** La semana operativa de siete días, las etiquetas fijas y las estimaciones por fase están actualizadas. No se inicia Sprint 2 en este cambio.
+**Sprint 1: CERRADO Y APROBADO. Sprint 2: entregables documentales publicados; validación física SIEM pendiente de ejecución local. Sprint 3: no iniciado.**
 
 ## Diagnóstico del programa
 
@@ -106,6 +106,7 @@ Los **90 minutos son el bloque de aprendizaje, no la jornada completa**. La estr
 - [Plan detallado de las 90 sesiones](curriculum/session-plan.md)
 - [Tracker](tracker.md)
 - [Rúbrica de evidencias](templates/rubric-template.md)
+- [Evaluaciones por fase (quiz + debugging, fases 1–5)](assessments/README.md)
 - [Checklist de validación de laboratorios](templates/lab-validation-checklist.md)
 - [Laboratorios](labs/README.md)
 - [Guías por fase](phases/)
