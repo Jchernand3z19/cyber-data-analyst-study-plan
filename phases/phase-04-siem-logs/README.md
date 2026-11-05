@@ -13,6 +13,10 @@ Analizar eventos sintéticos, identificar patrones explicables, priorizar señal
 | 61–65 | Falsos positivos, enriquecimiento, correlación y priorización | Tabla de pruebas y razonamiento de riesgo |
 | 66–70 | Triage, conservación, minimización e investigación integrada | Informe de caso |
 
+## Requisito de experiencia SIEM
+
+El laboratorio Python de este repositorio es una preparación reproducible y no sustituye una plataforma SIEM. Para aprobar la fase, se deberá trabajar en una instancia SIEM accesible, cargar exclusivamente el dataset sintético del curso y ejecutar consultas nativas de búsqueda, filtrado, agregación y una regla sencilla. La plataforma y su modalidad de acceso se seleccionarán y validarán antes de cerrar la fase; no se atribuirá experiencia de producto a ejercicios realizados solo con Python.
+
 ## Laboratorio ejecutable
 
 Complementa esta guía con el [laboratorio de análisis de logs](../../labs/phase-04-log-analysis/README.md), que incluye eventos sintéticos y un script Python para aplicar una regla de detección didáctica.
@@ -57,4 +61,4 @@ Nunca registres contraseñas, tokens de sesión, claves API ni cuerpos completos
 
 ## Criterios de aprobación
 
-Puedes reproducir la regla, explicar el umbral, mostrar al menos un positivo y un negativo, describir falsos positivos y separar observación de hipótesis. La evaluación no premia alertas dramáticas; premia conclusiones proporcionadas a la evidencia.
+Puedes reproducir la regla Python, explicar el umbral, mostrar al menos un positivo y un negativo, describir falsos positivos y separar observación de hipótesis. Además, debes demostrar consultas nativas en la plataforma SIEM elegida y adjuntar evidencia saneada de búsqueda y agregación. La evaluación no premia alertas dramáticas; premia conclusiones proporcionadas a la evidencia.
