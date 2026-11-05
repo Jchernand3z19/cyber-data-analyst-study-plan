@@ -1,4 +1,4 @@
-# Fase 1 — HTTP, web, SQL y fundamentos de seguridad
+# Fase 1 — Redes, HTTP, identidad, SQL y fundamentos de seguridad
 
 ## Objetivo
 
@@ -9,10 +9,14 @@ Entender cómo viaja una solicitud entre cliente y servidor, cómo se representa
 | Días | Tema | Evidencia mínima |
 |---|---|---|
 | 1–2 | Cliente-servidor, HTTP, métodos, códigos y cabeceras | Diagrama de solicitud/respuesta anotado |
-| 3–7 | URLs, parámetros, cookies, sesiones, JSON/HTML, DevTools y repaso | Ficha de inspección de una respuesta pública o de ejemplo |
+| 3–7 | DNS y recorrido web; identidad/autenticación/autorización; cookies; JSON/HTML; DevTools | Diagrama DNS→conexión→HTTP, ficha de identidad y evidencia saneada |
 | 8–11 | Tablas, claves, SELECT, filtros, JOIN y agregaciones | Consultas sobre datos sintéticos y resultados esperados |
 | 12–16 | Consultas parametrizadas, inyección SQL, validación, privilegios y auditoría | Matriz riesgo-control con ejemplos seguros |
 | 17–18 | Integración y evaluación | Informe breve reproducible y respuestas de razonamiento |
+
+## Redes e identidad antes de SQL
+
+Antes de trabajar con consultas, distingue dominio, resolución DNS, dirección IP, puerto, protocolo, autenticación y autorización. No necesitas configurar routers, administrar servidores ni realizar escaneos. El objetivo es interpretar el flujo y no confundir HTTP 401 (no autenticado) con 403 (acceso denegado).
 
 ## Laboratorio ejecutable de SQL
 
@@ -46,6 +50,8 @@ Documenta:
 5. Qué cambiaría si la respuesta fuera 401, 404 o 500.
 
 Este bloque es material de práctica sintético; no representa una petición ejecutada.
+
+El laboratorio SQL usa SQLite en memoria. La matriz de roles es un ejercicio de diseño conceptual: SQLite no demuestra la administración de usuarios y privilegios de un motor de base de datos empresarial.
 
 ## Laboratorio B — SQL con datos sintéticos
 
