@@ -99,6 +99,26 @@ Cada fase tiene quiz y debugging. La Fase 4 tiene una evaluación adaptada al ca
 
 **Nota:** el tiempo exacto de instalación de Wazuh no fue registrado; queda como dato no disponible, no como criterio que se haya medido.
 
+## Prerrequisitos de Hardware y SO
+
+- **RAM:** mínimo 8 GB; ideal 16 GB o más. Para ejecutar Wazuh Single-node con margen, asigna recursos a Docker según el checklist y evita ejecutar simultáneamente cargas pesadas.
+- **Disco:** al menos 50 GB libres para herramientas, imágenes, contenedores y datos de laboratorio. El espacio real depende de versiones, volúmenes y retención.
+- **Sistema operativo:** macOS, Windows o Linux de 64 bits. Docker Desktop está disponible para macOS y Windows; en Linux puede utilizarse Docker Engine o Docker Desktop compatible.
+- **Arquitectura:** confirma compatibilidad de cada imagen y herramienta con x86_64 o ARM64/Apple Silicon antes de instalar. La ruta Wazuh validada se ejecutó en Docker Desktop sobre macOS Apple Silicon.
+- **Power BI:** la Fase 3 requiere validar Power BI Desktop en el entorno Windows virtualizado descrito en la puerta del currículo; no se considera sustituido por la disponibilidad de Docker.
+
+Los requisitos anteriores son umbrales de preparación del programa, no garantía de que todas las herramientas funcionen con cualquier configuración. Consulta el [checklist de laboratorio](templates/lab-validation-checklist.md).
+
+## Documentación de soporte
+
+- [Glosario de datos y seguridad](docs/glossary.md)
+- [Mapa de dependencias y exenciones por diagnóstico](docs/dependency-map.md)
+- [Política de datos sintéticos](docs/data-synthetic-policy.md)
+- [Mantenimiento del repositorio](MAINTENANCE.md)
+- [Progreso personal de las 90 sesiones](PROGRESS.md)
+- [AUDIT-REPORT.md — informe de auditoría](AUDIT-REPORT.md)
+- [Licencia MIT](LICENSE)
+
 ## Navegación
 
 - [Plan detallado de las 90 sesiones](curriculum/session-plan.md)
