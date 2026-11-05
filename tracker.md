@@ -74,13 +74,13 @@
 - [ ] Día 61 — Falsos positivos y ajuste de reglas.
 - [ ] Día 62 — Enriquecimiento y contexto de eventos.
 - [ ] Día 63 — Correlación temporal básica.
-- [ ] Día 64 — Redacción de una alerta útil.
+- [ ] Día 64 — Comunicación de patrones observados en datos de eventos.
 - [ ] Día 65 — Priorización por impacto y probabilidad.
-- [ ] Día 66 — Triage y documentación de hallazgos.
+- [ ] Día 66 — Análisis de registros sintéticos por caso, periodo y categoría.
 - [ ] Día 67 — Conservación y minimización de logs.
 - [ ] Día 68 — Evitar registrar contraseñas, tokens y datos sensibles.
 - [ ] Día 69 — Caso integrado de investigación con logs sintéticos.
-- [ ] Día 70 — Evaluación de fase y reporte de hallazgos.
+- [ ] Día 70 — Evaluación de fase y reporte analítico de datos de seguridad.
 
 ## Fase 5 — Gobierno, privacidad y proyecto final (Días 71–90)
 - [ ] Día 71 — Gobierno de datos: roles y responsabilidades.
