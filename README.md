@@ -25,7 +25,7 @@ El dato es el objetivo; la seguridad es el dominio de aplicación. Las práctica
 
 ## Estado del trabajo
 
-**Sprint 1: CERRADO Y APROBADO. Sprint 2: CERRADO — documentación y evaluación actualizadas; Wazuh 4.9.0 validado físicamente con ingesta real de un log SSH sintético. Sprint 3: NO INICIADO.**
+**Sprint 1: CERRADO Y APROBADO. Sprint 2: CERRADO — documentación y evaluación actualizadas; Wazuh 4.9.0 validado físicamente con ingesta real de un log SSH sintético. Sprint 3: CERRADO Y APROBADO.**
 
 ### Decisión SIEM de Fase 4
 
@@ -95,19 +95,20 @@ Cada fase tiene quiz y debugging. La Fase 4 tiene una evaluación adaptada al ca
 - [x] Integrar el caso SSH en sesiones ATT&CK y SIEM, con campos `srcip`, `srcuser` y `rule.mitre.id`.
 - [x] Publicar quiz Fase 4 de 10 preguntas y un ejercicio de debugging.
 - [x] Aplicar la rúbrica común a la evidencia de Fase 4 y mantener la rúbrica de todas las fases.
-- [x] Mantener Sprint 3 sin iniciar.
+- [x] Sprint 3 cerrado y aprobado; documentación de soporte y mantenimiento publicada.
 
 **Nota:** el tiempo exacto de instalación de Wazuh no fue registrado; queda como dato no disponible, no como criterio que se haya medido.
 
 ## Prerrequisitos de Hardware y SO
 
-- **RAM:** mínimo 8 GB; ideal 16 GB o más. Para ejecutar Wazuh Single-node con margen, asigna recursos a Docker según el checklist y evita ejecutar simultáneamente cargas pesadas.
-- **Disco:** al menos 50 GB libres para herramientas, imágenes, contenedores y datos de laboratorio. El espacio real depende de versiones, volúmenes y retención.
-- **Sistema operativo:** macOS, Windows o Linux de 64 bits. Docker Desktop está disponible para macOS y Windows; en Linux puede utilizarse Docker Engine o Docker Desktop compatible.
-- **Arquitectura:** confirma compatibilidad de cada imagen y herramienta con x86_64 o ARM64/Apple Silicon antes de instalar. La ruta Wazuh validada se ejecutó en Docker Desktop sobre macOS Apple Silicon.
-- **Power BI:** la Fase 3 requiere validar Power BI Desktop en el entorno Windows virtualizado descrito en la puerta del currículo; no se considera sustituido por la disponibilidad de Docker.
+- **RAM:** mínimo 8 GB; recomendado 16 GB para ejecutar Wazuh con fluidez.
+- **Disco:** 50 GB libres como mínimo.
+- **Sistema operativo:** macOS (Apple Silicon o Intel), Windows 10/11 con WSL2, o Linux.
+- **Software base:** Docker Desktop instalado y funcionando.
 
-Los requisitos anteriores son umbrales de preparación del programa, no garantía de que todas las herramientas funcionen con cualquier configuración. Consulta el [checklist de laboratorio](templates/lab-validation-checklist.md).
+**Este programa es introductorio y no garantiza empleabilidad directa.** Los requisitos son una referencia de preparación; la compatibilidad de cada herramienta también depende de su versión y arquitectura.
+
+Consulta el [checklist de laboratorio](templates/lab-validation-checklist.md).
 
 ## Documentación de soporte
 
