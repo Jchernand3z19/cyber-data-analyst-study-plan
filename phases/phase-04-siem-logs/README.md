@@ -13,9 +13,17 @@ Analizar eventos sintéticos, identificar patrones explicables, priorizar señal
 | 61–65 | Falsos positivos, enriquecimiento, correlación y priorización | Tabla de pruebas y razonamiento de riesgo |
 | 66–70 | Triage, conservación, minimización e investigación integrada | Informe de caso |
 
-## Requisito de experiencia SIEM
+## Plataforma recomendada: Splunk Cloud Platform Trial
 
-El laboratorio Python de este repositorio es una preparación reproducible y no sustituye una plataforma SIEM. Para aprobar la fase, se deberá trabajar en una instancia SIEM accesible, cargar exclusivamente el dataset sintético del curso y ejecutar consultas nativas de búsqueda, filtrado, agregación y una regla sencilla. La plataforma y su modalidad de acceso se seleccionarán y validarán antes de cerrar la fase; no se atribuirá experiencia de producto a ejercicios realizados solo con Python.
+El laboratorio Python es una preparación reproducible, no experiencia SIEM. Se propone Splunk Cloud Platform Trial para evitar una instalación local. La guía oficial indica una prueba Cloud de duración limitada (15 días y hasta 5 GB/día en la documentación consultada); crea la cuenta y activa la prueba únicamente al comenzar esta fase. Verifica las condiciones vigentes antes de registrarte. La alternativa Splunk Enterprise Trial dura 60 días, pero requiere instalar software en Windows o Linux; no se asume compatible con macOS ARM ni con Windows ARM emulado.
+
+Recursos: [requisitos del tutorial y duración de pruebas](https://help.splunk.com/en/splunk-enterprise/search/search-tutorial/10.6/part-1-getting-started/what-you-need-for-this-tutorial), [referencia SPL](https://help.splunk.com/en/splunk-enterprise/search/spl-search-reference/10.4/introduction/welcome-to-the-search-reference).
+
+Para aprobar, carga solo el CSV sintético de este repositorio, ejecuta búsquedas, filtros, agregaciones y una regla temporal en la instancia y guarda evidencia saneada.
+
+## Laboratorio SPL
+
+Usa el [guion de consultas Splunk](../../labs/phase-04-log-analysis/splunk-search-lab.md) después de cargar el CSV sintético en la instancia de prueba. Las consultas son plantillas didácticas: ajusta index y sourcetype a los nombres que realmente hayas configurado.
 
 ## Laboratorio ejecutable
 
