@@ -31,6 +31,55 @@ El dato es el objetivo; la seguridad es el dominio de aplicación. Las práctica
 
 Consulta el [checklist de validación](templates/lab-validation-checklist.md) y la [guía de Fase 4](phases/phase-04-siem-logs/README.md).
 
+## Semana base — 7 días
+
+| Día | Tipo | Actividad |
+|---|---|---|
+| Lunes | Normal | Sesión regular (90 min) |
+| Martes | Normal | Sesión regular (90 min) |
+| Miércoles | Laboratorio o normal | Laboratorio si la fase lo tiene; reemplaza la sesión normal, no se suma |
+| Jueves | Normal | Sesión regular (90 min) |
+| Viernes | **Libre — no tocar** | Descanso |
+| Sábado | Repaso | Consolidación (45–60 min), no añade sesión |
+| Domingo | **Libre — no tocar** | Descanso |
+
+Cada semana contiene cuatro bloques de avance de lunes a jueves. Nunca se programan dos laboratorios seguidos; en Fase 4, máximo dos laboratorios por semana. Los días libres no se utilizan para recuperar ni adelantar contenido.
+
+## Duración estimada por fase
+
+| Fase | Sesiones | Estimación |
+|---|---:|---:|
+| 1 | 18 | 4.5 semanas |
+| 2 | 18 | 4.5 semanas |
+| 3 | 16 | 4 semanas |
+| 4 | 18 | 4.5 semanas |
+| 5 | 20 | 5 semanas |
+| **Total** | **90** | **22.5 semanas** |
+
+## Instalación y tiempo de estudio
+
+**Aviso al inicio de cada fase: Día 1 incluye instalación (~1 h extra), el resto no.** En Fase 4, Wazuh 4.9.0 ya está instalado y validado en el entorno descrito; no repetir instalación salvo que el laboratorio se reconstruya.
+
+Los 90 minutos son el bloque de aprendizaje, no la jornada completa: 10 min recuperación, 20 explicación, 35 práctica guiada, 15 ejercicio individual y 10 evidencia/reflexión. El repaso de sábado dura 45–60 minutos.
+
+## Coste y herramientas
+
+Se priorizan herramientas gratuitas y open-source. Wazuh 4.9.0 es la plataforma SIEM seleccionada para la Fase 4. ELK no se instaló ni se sometió a benchmark equivalente; queda pendiente/descartado por recursos para este entorno y alcance.
+
+## Ruta de las 90 sesiones
+
+| Fase | Días | Enfoque |
+|---|---:|---|
+| 1 | 1–18 | Redes, HTTP, SQL y fundamentos de seguridad |
+| 2 | 19–36 | Python, APIs y calidad de datos |
+| 3 | 37–52 | Power BI y analítica segura |
+| 4 | 53–70 | Logs y análisis de datos de seguridad |
+| 5 | 71–90 | Gobierno, privacidad y proyecto final |
+
+## Evaluaciones y control
+
+Cada fase tiene quiz y debugging. La Fase 4 tiene una evaluación adaptada al caso real de Wazuh: 10 preguntas y 1 ejercicio de debugging. La rúbrica común se aplica a las evidencias de todas las fases.
+
 ## Navegación
 
 - [Plan detallado de las 90 sesiones](curriculum/session-plan.md)
