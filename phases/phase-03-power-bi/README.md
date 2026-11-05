@@ -1,5 +1,8 @@
 # Fase 3 — Power BI y analítica segura
 
+> **Aviso de fase:** Día 1 incluye instalación (~1 h extra), el resto no. Si no se requiere instalar una herramienta en esta fase, utiliza ese tiempo para verificar versiones y abrir los archivos de práctica.
+
+
 ## Objetivo
 
 Construir un modelo analítico comprensible y verificable para PharmaTracker, con métricas reconciliadas y controles que reduzcan la exposición de información.
