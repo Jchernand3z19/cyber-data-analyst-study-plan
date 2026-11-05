@@ -4,6 +4,8 @@ Completa una fila con evidencia real antes de declarar una herramienta validada.
 
 ## Comparación SIEM — despliegue local de laboratorio
 
+**Estimación de descarga:** reserva aproximadamente **10–15 minutos** para descargar las imágenes/paquetes de Wazuh en una conexión estándar. Es una estimación orientativa, no una medición del laboratorio validado; puede variar significativamente según conexión, región, caché y tamaño de imagen. Este tiempo es independiente del tiempo de instalación, que en la prueba real no quedó registrado.
+
 | Campo | Wazuh all-in-one | Elastic Stack (Elasticsearch + Kibana) |
 |---|---|---|
 | SO / arquitectura | Validación realizada en Docker Desktop sobre macOS Apple Silicon, Wazuh 4.9.0 Single-node. Los componentes del stack se ejecutaron en contenedores; no fue una instalación nativa de los servicios centrales sobre macOS. | Elasticsearch soporta paquetes Linux, macOS y Windows; Kibana packages Linux, Darwin y Windows. Docker para desarrollo. Confirmar matriz exacta de versión/arquitectura antes de descargar. |
