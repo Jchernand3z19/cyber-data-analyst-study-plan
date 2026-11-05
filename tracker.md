@@ -63,12 +63,12 @@
 - [ ] Día 52 — Evaluación de fase y revisión del modelo.
 
 ## Fase 4 — Logs, detección y fundamentos SIEM (Días 53–70)
-- [ ] Día 53 — Logs e ingesta del dataset sintético en SIEM.
-- [ ] Día 54 — Timestamps y rango temporal en SIEM.
-- [ ] Día 55 — Campos extraídos y calidad de eventos en SIEM.
-- [ ] Día 56 — Distinguir eventos, alertas e incidentes en SIEM.
-- [ ] Día 57 — Búsqueda SPL de autenticaciones fallidas.
-- [ ] Día 58 — Indicadores de entrada sospechosa sin explotar sistemas.
+- [ ] Día 53 — ATT&CK: clasificar eventos sintéticos por táctica/técnica.
+- [ ] Día 54 — ATT&CK: tabla log→técnica y confianza.
+- [ ] Día 55 — Ingesta de logs sintéticos como fuente de datos.
+- [ ] Día 56 — Consultas y agregaciones de eventos.
+- [ ] Día 57 — Calidad de logs: nulos, duplicados y formatos.
+- [ ] Día 58 — Dashboard de reporting de eventos y calidad.
 - [ ] Día 59 — Consultas SPL de filtrado y agregación.
 - [ ] Día 60 — Detección temporal con SPL y ventana móvil.
 - [ ] Día 61 — Falsos positivos y ajuste de reglas.
@@ -79,7 +79,7 @@
 - [ ] Día 66 — Análisis de registros sintéticos por caso, periodo y categoría.
 - [ ] Día 67 — Conservación y minimización de logs.
 - [ ] Día 68 — Evitar registrar contraseñas, tokens y datos sensibles.
-- [ ] Día 69 — Caso integrado de investigación con logs sintéticos.
+- [ ] Día 69 — Triage documental: ticket sintético y análisis de campos.
 - [ ] Día 70 — Evaluación de fase y reporte analítico de datos de seguridad.
 
 ## Fase 5 — Gobierno, privacidad y proyecto final (Días 71–90)
