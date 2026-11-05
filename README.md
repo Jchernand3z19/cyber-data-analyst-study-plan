@@ -1,108 +1,99 @@
 # Ruta de aprendizaje — Security Data Analyst
 
-Ruta estructurada de **90 sesiones de aprendizaje**, más preparación inicial para desarrollar competencias de **Security Data Analyst**, con énfasis en análisis de datos, calidad, seguridad, detección y gobierno. **PharmaTracker** funciona como proyecto integrador para aplicar los conceptos a un flujo de datos controlado.
+Programa introductorio de 90 sesiones para desarrollar criterio analítico aplicado al dominio de la seguridad. La prioridad es producir datos interpretables y evidencia reproducible, no operar un SOC.
 
-> Este repositorio está orientado a analítica de seguridad y gobierno de datos. No es un curso de pentesting ni una ruta para desarrollar herramientas ofensivas. Las prácticas de seguridad se realizan con datos sintéticos, sistemas propios o recursos expresamente autorizados.
+## Perfil objetivo
 
-## Objetivos del plan
+El programa está orientado a perfiles híbridos:
+- Security Data Analyst
+- Junior Security Analyst orientado a datos
+- Data Quality Analyst con enfoque en seguridad
+- Security Reporting Analyst
+- Junior GRC / Data Governance Analyst
 
-Al finalizar, deberías poder:
+## Alcance y no-alcance
 
-- Interpretar tráfico y respuestas HTTP y consultar datos relacionales de forma segura.
-- Crear procesos reproducibles con Python y APIs, aplicando validaciones y controles de calidad.
-- Modelar y analizar datos con Power BI, documentando métricas y accesos.
-- Analizar logs, construir reglas explicables y comunicar hallazgos sin exagerar la evidencia.
-- Documentar gobierno, privacidad, trazabilidad, riesgos y controles de un proyecto de datos.
+Es un programa **INTRODUCTORIO**. No garantiza empleabilidad, no sustituye experiencia real en un SOC y no equivale a una certificación profesional. Tampoco forma administradores de infraestructura ni especialistas de pentesting.
 
-## Ruta de aprendizaje
+El dato es el objetivo; la seguridad es el dominio de aplicación. Las prácticas usan datos sintéticos, públicos o expresamente autorizados. Cada sesión relacionada con seguridad debe terminar en una evidencia de datos: consulta, tabla, dashboard o informe. No se pide producir reglas operativas, playbooks ni respuestas a incidentes.
+
+## Cómo empezar en 10 minutos
+
+1. Clona el repositorio:
+   `git clone https://github.com/Jchernand3z19/security-data-analyst-learning-path.git`
+2. Entra en la carpeta:
+   `cd security-data-analyst-learning-path`
+3. Lee el [Día 0](phases/phase-00-foundations/README.md) y realiza el diagnóstico inicial.
+4. Si el diagnóstico indica que ya tienes la base, aplica los umbrales para omitir la Fase 0 o la Fase 1.
+5. Abre la [primera sesión](lessons/day-01-http-client-server.md) y registra evidencia solo después de realizar la práctica.
+
+Estos diez minutos sirven para orientarte y abrir el material; las instalaciones se realizan en los puntos indicados abajo y pueden requerir tiempo adicional.
+
+## Semana base
+
+La distribución solicitada suma ocho bloques (4 normales + 1 laboratorio + 1 repaso + 2 libres), por lo que se organiza como un **ciclo de 8 días**, no como una semana de siete días. Los días libres son descanso real.
+
+| Bloque | Tipo | Actividad |
+|---|---|---|
+| 1 | Normal | Sesión regular |
+| 2 | Normal | Sesión regular |
+| 3 | Laboratorio — miércoles | Laboratorio práctico; reemplaza la sesión normal, no se suma |
+| 4 | Normal | Sesión regular |
+| 5 | Normal | Sesión regular |
+| 6 | Repaso — sábado | Consolidación y evidencia de datos; reemplaza la sesión normal |
+| 7 | Libre — no tocar | Descanso |
+| 8 | Libre — no tocar | Descanso |
+
+Los rótulos miércoles y sábado son anclas de tipo de actividad; al aplicar el ciclo de ocho bloques, no se debe forzar que coincidan con una semana calendario. Los laboratorios reemplazan bloques normales, nunca se añaden como carga extra. En Fase 4, máximo dos laboratorios por semana y nunca en días consecutivos.
+
+## Instalación
+
+La instalación se concentra en el primer día de cada etapa que la necesita:
+- **Día 0 global:** herramientas base y verificación del entorno.
+- **Inicio de Fase 3:** Power BI Desktop y el entorno Windows requerido para utilizarlo.
+- **Inicio de Fase 4:** instalación de la plataforma SIEM que se elija, solo después de la prueba de viabilidad.
+
+**Aviso al inicio de cada fase: Día 1 incluye instalación (~1 h extra), el resto no.** Si no hay instalación necesaria, ese tiempo se usa para comprobar versiones y abrir los archivos de práctica. La decisión de SIEM sigue pendiente; consulta [checklist de validación](templates/lab-validation-checklist.md).
+
+## Tiempo realista
+
+Los **90 minutos son el bloque de aprendizaje, no la jornada completa**. La estructura es 10/20/35/15/10 minutos: recuperación, explicación, práctica guiada, ejercicio individual y evidencia/reflexión. Añade **+setup/evidencia si aplica**. El primer día de una fase puede requerir aproximadamente una hora adicional de instalación; no se debe recortar la práctica para aparentar que terminó en 90 minutos.
+
+## Coste total
+
+**Coste de software previsto: 0 €**, utilizando herramientas gratuitas y alternativas open-source. No se presupuestan licencias de pago ni trials como dependencia del curso. El coste de hardware, electricidad y conexión a internet no está incluido. La selección final de SIEM queda abierta entre Wazuh y ELK y no se considera validada hasta probar instalación y consumo de recursos.
+
+## Frase guía
+
+**No formas analistas de SOC. Formas analistas de datos que entienden el dominio de la seguridad.**
+
+## Ruta de las 90 sesiones
 
 | Fase | Días | Enfoque | Guía |
 |---|---:|---|---|
-| 1 | 1–18 | Redes, HTTP, SQL y fundamentos de seguridad | [Abrir fase 1](phases/phase-01-http-sql/README.md) |
-| 2 | 19–36 | Python, APIs y calidad de datos | [Abrir fase 2](phases/phase-02-python-apis/README.md) |
-| 3 | 37–52 | Power BI y analítica segura | [Abrir fase 3](phases/phase-03-power-bi/README.md) |
-| 4 | 53–70 | Logs, detección y fundamentos SIEM | [Abrir fase 4](phases/phase-04-siem-logs/README.md) |
-| 5 | 71–90 | Gobierno, privacidad y proyecto final | [Abrir fase 5](phases/phase-05-governance/README.md) |
+| 1 | 1–18 | Redes, HTTP, SQL y fundamentos de seguridad | [Fase 1](phases/phase-01-http-sql/README.md) |
+| 2 | 19–36 | Python, APIs y calidad de datos | [Fase 2](phases/phase-02-python-apis/README.md) |
+| 3 | 37–52 | Power BI y analítica segura | [Fase 3](phases/phase-03-power-bi/README.md) |
+| 4 | 53–70 | Logs y análisis de datos de seguridad | [Fase 4](phases/phase-04-siem-logs/README.md) |
+| 5 | 71–90 | Gobierno, privacidad y reporting | [Fase 5](phases/phase-05-governance/README.md) |
 
-## Navegación rápida
+## Diagnóstico del programa
 
-- [Diseño operativo y preparación](curriculum/README.md) — herramientas, duración y estructura de cada sesión.
-- [Plan detallado de las 90 sesiones](curriculum/session-plan.md) — objetivos, recursos, prácticas y evidencias.
-- [Tracker de las 90 sesiones](tracker.md) — fuente oficial del estado de cada día.
-- [Lección del día 1](lessons/day-01-http-client-server.md) — primera sesión desarrollada paso a paso.
-- [Registros diarios](daily-logs/README.md) — formato y reglas para guardar evidencia aprobada.
-- [Laboratorios y scripts](labs/README.md) — prácticas reproducibles con datos sintéticos.
-- [Integración con Google Calendar](integrations/google-calendar/README.md) — configuración y funcionamiento de recordatorios.
-- [Workflow de sincronización de calendario](.github/workflows/sync-study-calendar.yml).
-- [Auditoría curricular](curriculum/session-audit.md) — hallazgos y dependencias pendientes.
-- [Hitos PharmaTracker](curriculum/pharmatracker-milestones.md) — entregables acumulativos.
-- [Evaluación y recuperación](curriculum/evaluation-and-remediation.md) — rúbrica común.
+- **SIEM:** Splunk Cloud Trial queda descartado como solución única porque no es local ni reproducible sin coste. La herramienta no está decidida. Wazuh (local, open source) y ELK (local, open source) siguen como candidatas; falta prueba real de instalación y consumo de recursos.
+- **Power BI:** la fase conserva Power BI como herramienta de aprendizaje. La validación de la instalación y uso se registra en el checklist de laboratorios; no se sustituye por otro BI.
+- **Calendario:** la sincronización permanece pausada hasta una revisión humana específica. El repositorio y el material pueden estudiarse sin activar el calendario.
 
-## Progreso
+## Navegación
 
-**Estado actual del tracker:** consulta [tracker.md](tracker.md) para el avance real. El estado solo cambia con evidencia y evaluación. Las casillas solo se marcan después de completar la práctica, presentar evidencia y superar la evaluación. El registro se actualizará mediante el proceso de check-in y validación de evidencia que se definirá para cada sesión.
-
-| Fase | Sesiones | Estado |
-|---|---:|---|
-| 1. HTTP, SQL y seguridad | 18 | ⬜ Pendiente |
-| 2. Python, APIs y calidad | 18 | ⬜ Pendiente |
-| 3. Power BI y analítica segura | 16 | ⬜ Pendiente |
-| 4. Logs y SIEM | 18 | ⬜ Pendiente |
-| 5. Gobierno y proyecto final | 20 | ⬜ Pendiente |
-| **Total** | **90** | **0/90 aprobadas al inicio** |
-
-Actualiza este resumen cuando cambie el estado de las sesiones en [tracker.md](tracker.md). No marques una fase como terminada hasta aprobar su evaluación.
-
-## Rutina de estudio
-
-- **Días:** lunes a sábado.
-- **Horario:** 08:00–09:30, hora de Honduras (`America/Tegucigalpa`).
-- **Duración:** 90 minutos por sesión.
-- **Preparación:** 3 sesiones iniciales independientes de las 90 sesiones académicas.
-
-Distribución: 10 min de recuperación activa, 20 min de estudio, 35 min de práctica guiada, 15 min de ejercicio individual y 10 min para evidencia y dudas. Consulta el [diseño operativo](curriculum/README.md).
-
-Los recordatorios de Google Calendar se crean mediante GitHub Actions. La automatización administra eventos; no marca lecciones como completadas ni evalúa el aprendizaje.
-
-## Método de evaluación
-
-1. Completar la lectura y la práctica indicada.
-2. Guardar evidencia reproducible y anotar dudas.
-3. Realizar 2–3 preguntas de razonamiento y diagnóstico.
-4. Repasar los criterios que no se dominen.
-5. Marcar la sesión como aprobada solo cuando exista evidencia y se supere la evaluación.
-
-Si una sesión queda incompleta, se retoma antes de avanzar. No se inventan fechas, resultados ni evidencias.
-
-## Estructura del repositorio
-
-```text
-.
-├── .github/workflows/       # Automatizaciones de estudio y calendario
-├── daily-logs/              # Evidencia de sesiones aprobadas
-├── integrations/
-│   └── google-calendar/     # Sincronización con Google Calendar
-├── labs/                    # Laboratorios reproducibles y datos sintéticos
-├── lessons/                 # Lecciones desarrolladas por día
-├── curriculum/              # Diseño operativo y plan detallado de 90 sesiones
-├── phases/                  # Guías, prácticas y entregables por fase
-└── tracker.md               # Seguimiento oficial de las 90 sesiones
-```
+- [Día 0 / Fase 0 opcional](phases/phase-00-foundations/README.md)
+- [Test de nivel inicial](templates/initial-level-assessment.md)
+- [Plan detallado de las 90 sesiones](curriculum/session-plan.md)
+- [Tracker](tracker.md)
+- [Rúbrica de evidencias](templates/rubric-template.md)
+- [Checklist de validación de laboratorios](templates/lab-validation-checklist.md)
+- [Laboratorios](labs/README.md)
+- [Guías por fase](phases/)
 
 ## Seguridad y uso responsable
 
-Consulta también la [política y lista de verificación de seguridad](SECURITY.md) antes de añadir archivos o cambiar permisos.
-
-- Utiliza únicamente datos públicos, sintéticos o cuyo uso esté autorizado.
-- No subas contraseñas, tokens, claves API, archivos de credenciales ni datos personales o confidenciales.
-- No escanees, ataques ni automatices pruebas contra sistemas de terceros sin autorización explícita.
-- Distingue siempre entre resultados ejecutados, ejemplos didácticos, hipótesis y trabajo pendiente.
-- Revisa los permisos y la información antes de publicar cualquier evidencia.
-
-## Alcance y limitaciones
-
-Este plan es una ruta de aprendizaje y un proyecto de práctica; no equivale a una certificación profesional ni garantiza dominio laboral por completar 90 días. Las herramientas, APIs y controles deben probarse en el entorno correspondiente y documentarse con sus limitaciones.
-
----
-
-**Regla principal:** aprender, practicar, verificar y documentar. Nunca marcar como completado algo que no se haya realizado.
+Usa datos sintéticos, públicos o autorizados. No subas contraseñas, tokens, claves API, datos personales ni información confidencial. No ejecutes pruebas contra sistemas de terceros. Diferencia los resultados realmente obtenidos de los ejemplos y de las tareas pendientes.
