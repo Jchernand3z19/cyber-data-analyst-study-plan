@@ -9,8 +9,12 @@ Los laboratorios complementan las guías de fase con ejercicios ejecutables. Tod
 | 1 | HTTP y SQL | [Guía y práctica SQLite](phase-01-http-sql/README.md) |
 | 2 | Python y calidad de datos | [Guía, CSV y validador](phase-02-data-quality/README.md) |
 | 3 | Power BI y modelo analítico | [Guía, CSV y medidas DAX](phase-03-power-bi/README.md) |
-| 4 | Logs y detección | [Guía, eventos sintéticos y analizador](phase-04-log-analysis/README.md) |
+| 4 | Logs y detección | [Guía, eventos sintéticos y analizador Python](phase-04-log-analysis/README.md), [laboratorio SPL para Splunk](phase-04-log-analysis/splunk-search-lab.md) |
 | 5 | Gobierno y proyecto final | [Guía de fase 5](../phases/phase-05-governance/README.md) y [plantillas de gobierno](../phases/phase-05-governance/templates/README.md). |
+
+## Verificación local de scripts
+
+Desde la raíz del repositorio, ejecuta `bash labs/verify-labs.sh`. El script corre SQLite, valida los conteos esperados del CSV de calidad y comprueba los resultados del analizador de logs. Requiere Python 3 y no instala dependencias externas. Los resultados se escriben en carpetas `output/` ignoradas por Git. Este chequeo no valida Power BI Desktop ni reemplaza la práctica en Splunk Cloud.
 
 ## Reglas
 
