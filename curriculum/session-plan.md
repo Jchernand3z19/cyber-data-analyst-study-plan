@@ -73,7 +73,7 @@ Cada sesión dura 90 minutos. Sigue la estructura general del [diseño operativo
 
 ## Fase 4 — Logs, detección y fundamentos SIEM
 
-**Requisito práctico:** el análisis con Python es una preparación reproducible, no experiencia SIEM. Antes de aprobar esta fase debe seleccionarse una plataforma SIEM accesible y ejecutar búsquedas, filtros, agregaciones y una regla sobre los eventos sintéticos del curso. La plataforma, acceso, consultas nativas y evidencia quedarán documentados; no se afirmará experiencia de producto a partir de ejercicios Python.
+**Plataforma didáctica propuesta:** Splunk Cloud Platform Trial, para evitar instalar un servidor SIEM local en el Mac. La prueba gratuita publicada es limitada (15 días según la guía oficial); reservar el alta para cuando comience la fase 4. Si la oferta o el acceso cambia, revalidar antes de iniciar. La fase solo se aprueba con búsquedas y consultas SPL ejecutadas en la instancia real. [Requisitos del tutorial oficial](https://help.splunk.com/en/splunk-enterprise/search/search-tutorial/10.6/part-1-getting-started/what-you-need-for-this-tutorial).
 
 | Sesión | Objetivo de aprendizaje | Lectura / recurso | Práctica guiada | Evidencia de salida |
 |---:|---|---|---|---|
@@ -81,10 +81,10 @@ Cada sesión dura 90 minutos. Sigue la estructura general del [diseño operativo
 | 54 | Normalizar timestamps y zonas horarias. | [Python datetime](https://docs.python.org/3/library/datetime.html) | Convertir timestamps sintéticos a UTC y detectar fechas inválidas. | Tabla antes/después y regla de normalización. |
 | 55 | Interpretar severidad y campos estructurados. | [OWASP Logging Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html) | Diseñar un esquema con timestamp, event_type, outcome, severity y request_id. | Esquema JSON y ejemplos. |
 | 56 | Distinguir evento, alerta e incidente. | [NIST SP 800-61 Rev. 2](https://csrc.nist.gov/pubs/sp/800/61/r2/final) | Clasificar escenarios ficticios según evidencia disponible. | Tabla de clasificación y justificación. |
-| 57 | Analizar patrones de autenticación fallida. | [MITRE ATT&CK: Brute Force](https://attack.mitre.org/techniques/T1110/) | Contar fallos por alias ficticio y ventana temporal. | Consulta y resultado con advertencia de contexto. |
+| 57 | Analizar patrones de autenticación fallida con búsqueda SPL. | [MITRE ATT&CK: Brute Force](https://attack.mitre.org/techniques/T1110/), [Splunk Search Reference](https://help.splunk.com/en/splunk-enterprise/search/spl-search-reference/10.4/introduction/welcome-to-the-search-reference) | Buscar event_type=authentication y outcome=failure; inspeccionar eventos y agrupar por user_alias en la instancia SIEM. | Consulta SPL, conteos y captura saneada. |
 | 58 | Reconocer entradas sospechosas sin ejecutar ataques. | [OWASP: Logging](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html) | Clasificar cadenas sintéticas de prueba como normal/inesperado, sin enviarlas a sistemas. | Catálogo de indicadores y falsos positivos posibles. |
-| 59 | Filtrar y agregar eventos. | [pandas: GroupBy](https://pandas.pydata.org/docs/user_guide/groupby.html) | Resumir eventos por hora, tipo y resultado. | Consultas y tabla agregada. |
-| 60 | Construir reglas explicables de anomalía. | [NIST SP 800-94](https://csrc.nist.gov/pubs/sp/800/94/final) | Crear regla didáctica de umbral sobre datos sintéticos. | Regla, ventana, umbral y casos detectados. |
+| 59 | Filtrar y agregar eventos con SPL. | [Splunk Search Reference](https://help.splunk.com/en/splunk-enterprise/search/spl-search-reference/10.4/introduction/welcome-to-the-search-reference) | Aplicar filtros y stats para contar eventos por tipo, resultado y alias; comparar con Python. | Consultas SPL, tabla agregada y conciliación. |
+| 60 | Construir una detección temporal con SPL. | [Splunk: streamstats](https://help.splunk.com/en/splunk-enterprise/search/spl-search-reference/10.4/search-commands/streamstats), [NIST SP 800-94](https://csrc.nist.gov/pubs/sp/800/94/final) | Ordenar eventos y usar streamstats con ventana de diez minutos para contar fallos por alias; filtrar umbral de cinco. | Consulta SPL, eventos detectados y diferencia frente a la regla Python. |
 | 61 | Medir falsos positivos y ajustar reglas. | [Google SRE: Monitoring](https://sre.google/sre-book/monitoring-distributed-systems/) | Probar eventos normales y anómalos; ajustar umbral sin ocultar limitaciones. | Matriz de confusión simple y ajuste justificado. |
 | 62 | Enriquecer eventos con contexto permitido. | [MITRE ATT&CK: Data Sources](https://attack.mitre.org/datasources/) | Añadir etiquetas ficticias de activo, entorno y criticidad. | Dataset enriquecido y diccionario de fuentes. |
 | 63 | Correlacionar eventos en el tiempo. | [Python datetime](https://docs.python.org/3/library/datetime.html) | Correlacionar por alias/request_id y ventana temporal; manejar timestamps inválidos. | Secuencia temporal anotada. |
@@ -94,7 +94,7 @@ Cada sesión dura 90 minutos. Sigue la estructura general del [diseño operativo
 | 67 | Definir conservación y minimización de logs. | [NIST SP 800-92](https://csrc.nist.gov/pubs/sp/800/92/final) | Proponer retención por tipo de evento y propósito, sin inventar obligación legal. | Tabla de retención propuesta. |
 | 68 | Evitar exposición de secretos y datos sensibles en logs. | [OWASP Logging Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html) | Revisar logs sintéticos y enmascarar valores prohibidos. | Checklist de redacción y log corregido. |
 | 69 | Resolver investigación integrada de logs sintéticos. | [NIST SP 800-94](https://csrc.nist.gov/pubs/sp/800/94/final) | Aplicar filtros, regla, correlación y análisis de falsos positivos. | Dataset, regla reproducible e informe. |
-| 70 | Evaluar fase 4 y comunicar resultados. | Revisión de recursos de sesiones 53–69. | Presentar hallazgos sin afirmar compromiso o incidente sin evidencia. | Evaluación y reporte ejecutivo breve. |
+| 70 | Evaluar fase 4 y defender búsquedas SIEM. | Revisión de recursos de sesiones 53–69. | Resolver un caso nuevo en la plataforma SIEM; presentar consultas, resultados, falsos positivos, limitaciones y conclusión proporcionada. | Evaluación de fase, consultas SPL y reporte ejecutivo breve. |
 
 ## Fase 5 — Gobierno, privacidad y proyecto final
 
