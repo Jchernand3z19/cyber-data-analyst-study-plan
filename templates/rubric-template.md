@@ -1,54 +1,41 @@
 # Rúbrica de evaluación de evidencias
 
-Usa esta rúbrica para evaluar una evidencia concreta. La evidencia debe ser un producto de análisis de datos: consulta, tabla, dashboard o informe. No se evalúa la creación de reglas operativas, playbooks ni acciones de respuesta.
+Aplicar esta misma rúbrica a TODAS las fases (1–5), no solo a las fases con laboratorio. La evidencia debe ser producto de datos: consulta, tabla, dashboard o informe. No se evalúan reglas operativas, playbooks ni acciones de respuesta.
 
 ## Niveles
 
 | Nivel | Descripción |
 |---|---|
-| Insuficiente | La evidencia falta, no se puede reproducir o contiene errores que invalidan la conclusión. |
-| En desarrollo | Hay un resultado parcial; faltan validaciones, contexto o explicación de limitaciones. |
-| Competente | El resultado es correcto, reproducible, está contextualizado y responde al objetivo. |
-| Ejemplar | Además de competente, permite auditoría clara, compara alternativas y comunica incertidumbre y límites con precisión. |
+| 1 — Insuficiente | Falta evidencia, no es reproducible o contiene errores que invalidan la conclusión. |
+| 2 — En desarrollo | Resultado parcial; faltan validaciones, contexto o limitaciones. |
+| 3 — Competente | Correcto, reproducible, contextualizado y responde al objetivo. |
+| 4 — Ejemplar | Además, permite auditoría, compara alternativas y comunica incertidumbre y límites. |
 
-## Criterios por evidencia
+## Criterios (1–4 cada uno)
+1. Exactitud y calidad: tipos, filtros, claves, fechas, nulos, duplicados y cálculos.
+2. Reproducibilidad: fuente, pasos, consulta/código, parámetros y versiones.
+3. Interpretación: responde una pregunta y evita inferencias no sustentadas.
+4. Comunicación y límites: definiciones, contexto, incertidumbre, privacidad y limitaciones.
 
-Puntúa cada criterio de 1 a 4 usando los niveles anteriores.
+Aprobación sugerida: mínimo 12/16 y ningún criterio por debajo de 2. Si no aprueba, corregir y volver a presentar.
 
-| Criterio | Qué se observa |
-|---|---|
-| Exactitud y calidad | Tipos, filtros, claves, fechas, nulos, duplicados y cálculos correctos. |
-| Reproducibilidad | Fuente, pasos, consulta/código y parámetros suficientes para repetir el resultado. |
-| Interpretación | La tabla, métrica o visual responde a una pregunta concreta y evita inferencias no sustentadas. |
-| Comunicación y límites | Contexto, definiciones, incertidumbre, privacidad y limitaciones documentadas. |
+## Aplicación por fase
 
-**Aprobación sugerida:** mínimo 12/16 y ningún criterio por debajo de 2. Si la evidencia es insuficiente, se corrige y vuelve a presentar; no se marca como aprobada.
+| Fase | Evidencia ejemplo | Verificación específica |
+|---|---|---|
+| 1 — HTTP/SQL | Consulta de eventos web sintéticos por ruta y estado | JOIN, filtros, granularidad, conteo conciliado y secretos excluidos |
+| 2 — Python/APIs | Pipeline CSV/JSON con salida limpia y rechazos | Tipos, nulos, duplicados, excepciones, conteos entrada/salida y trazabilidad |
+| 3 — Power BI | Modelo y dashboard de métricas | Granularidad, relaciones, medidas reconciliadas, filtros y límites de RLS |
+| 4 — Logs/ATT&CK/SIEM | Consulta, tabla de clasificación y dashboard de calidad | UTC, cobertura, etiquetas con confianza, duplicados y diferencia evento/alerta/incidente |
+| 5 — Gobierno | Inventario, linaje, matriz de acceso e informe | Propósito, minimización, reglas de calidad, control existente vs propuesto y riesgo residual |
 
-## Ejemplos de aplicación por fase
-
-### Fase 1 — HTTP, SQL y fundamentos de seguridad
-
-**Evidencia:** consulta SQL sobre eventos web sintéticos que resume códigos HTTP por ruta y método.
-
-- Exactitud: filtros y agregaciones concilian con el dataset.
-- Reproducibilidad: consulta SQL y dataset sintético están incluidos.
-- Interpretación: tabla explica distribución de estados sin afirmar ataques.
-- Comunicación: se anonimizan alias y se explican límites de los datos.
-
-### Fase 4 — Logs y análisis de datos de seguridad
-
-**Evidencia:** consulta sobre eventos sintéticos y tabla agregada de fallos de autenticación por intervalo temporal.
-
-- Exactitud: zona horaria, ventana, conteos y duplicados están tratados correctamente.
-- Reproducibilidad: consulta SIEM o análisis equivalente, dataset y parámetros documentados.
-- Interpretación: se distingue volumen observado de una conclusión sobre compromiso.
-- Comunicación: se informan falsos positivos posibles, cobertura y límites del dataset.
-
-### Fase 5 — Gobierno, privacidad y reporting
-
-**Evidencia:** informe de calidad, inventario y matriz de acceso de un conjunto de datos ficticio.
-
-- Exactitud: campos, clasificación y reglas de calidad son coherentes.
-- Reproducibilidad: definiciones y criterios de aceptación están documentados.
-- Interpretación: riesgos y métricas se vinculan con el propósito de los datos.
-- Comunicación: se distingue control existente de propuesta y se explican límites legales/técnicos.
+## Hoja de evaluación
+- Fase / sesión:
+- Evidencia / ubicación:
+- Exactitud y calidad (1–4):
+- Reproducibilidad (1–4):
+- Interpretación (1–4):
+- Comunicación y límites (1–4):
+- Total /16:
+- Correcciones necesarias:
+- Estado: pendiente / en desarrollo / competente / ejemplar.
