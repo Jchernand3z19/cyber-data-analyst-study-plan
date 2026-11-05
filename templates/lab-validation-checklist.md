@@ -7,20 +7,34 @@ Completa una fila con evidencia real antes de declarar una herramienta validada.
 | Campo | Wazuh all-in-one | Elastic Stack (Elasticsearch + Kibana) |
 |---|---|---|
 | SO / arquitectura | Componentes centrales en Linux 64-bit; quickstart enumera Ubuntu 16.04–24.04, Amazon Linux, RHEL y otras distribuciones. x86_64 y ARM64 según guía. No instalar servidor central nativo en macOS; usar Linux VM/containers compatibles. | Elasticsearch soporta paquetes Linux, macOS y Windows; Kibana packages Linux, Darwin y Windows. Docker para desarrollo. Confirmar matriz exacta de versión/arquitectura antes de descargar. |
-| RAM | Quickstart oficial: 8 GiB recomendados para 1–25 agentes all-in-one. No confundir mínimo del manager aislado con stack completo. | No hay un único mínimo universal para el stack de laboratorio. La guía Docker exige Docker Desktop con al menos 4 GB asignados; Elasticsearch usa heap y memoria fuera del heap. 4 GB es asignación mínima documentada para seguir quickstart, no recomendación de rendimiento. |
+| RAM | Docker Desktop: **11.72 GiB asignados**. Consumo real del stack: **~2.9 GB** (Indexer 1.66 GB, Manager 911 MB, Dashboard 382 MB). CPU observada: **<4%**. | No hay un único mínimo universal para el stack de laboratorio. La guía Docker exige Docker Desktop con al menos 4 GB asignados; Elasticsearch usa heap y memoria fuera del heap. 4 GB es asignación mínima documentada para seguir quickstart, no recomendación de rendimiento. |
 | Disco | 50 GB para escenario quickstart de 1–25 agentes y 90 días de datos. El uso real depende de alertas/retención. | No se publica un mínimo universal de disco para el stack local. Reservar 20 GB libres como presupuesto inicial de laboratorio (supuesto operativo, no mínimo oficial); medir índices, volúmenes y crecimiento. |
 | Dependencias | Linux 64-bit, privilegios root/sudo, conectividad para paquetes, puertos requeridos, indexer + server + dashboard; agente opcional para el ejercicio de logs locales. | Docker Desktop o paquetes compatibles; Elasticsearch + Kibana misma versión; recursos Docker asignados; configuración de kernel/sistema (p. ej. vm.max_map_count en Linux para escenarios aplicables). |
-| Tiempo de instalación | Estimación de planificación: 30–60 min en VM Linux limpia, sin contar descarga lenta ni resolución de fallos. **No medido.** | Estimación de planificación: 20–45 min con Docker quickstart, sin contar descargas lentas ni resolución de fallos. **No medido.** |
+| Tiempo de instalación | **No registrado en la evidencia recibida.** La duración exacta desde inicio hasta dashboard disponible no se proporciona; no se inventa. | No ejecutado. |
 | Facilidad de setup | Media: instalador asistido, pero despliega tres componentes y requiere Linux/recursos/puertos. | Media: Docker quickstart simplifica inicio, pero exige Docker, memoria y versiones coordinadas. |
-| Ingesta sintética | Pendiente: enviar JSON/NDJSON por método documentado de ingestión/indexación; confirmar documento visible y campos consultables. | Pendiente: crear índice e indexar documento JSON por API REST; confirmar documento recuperable y campos consultables. |
-| Resultado esperado | Documento sintético visible con event_id, timestamp, event_type, outcome y source_label; conteo coincide con archivo fuente. | Documento sintético recuperable desde índice; conteo y campos coinciden con archivo fuente. |
+| Ingesta sintética | **Exitosa**: log sintético de fallo SSH procesado; Wazuh generó regla **5710**, nivel **5**, y mapeo MITRE ATT&CK **T1110.001 — Password Guessing**. | Pendiente: crear índice e indexar documento JSON por API REST; confirmar documento recuperable y campos consultables. |
+| Resultado observado | Evento SSH fallido procesado por Wazuh; regla 5710 (nivel 5) y mapeo T1110.001. Campos de análisis: `srcip`, `srcuser`, `rule.mitre.id`. | Documento sintético recuperable desde índice; conteo y campos coinciden con archivo fuente. |
 | Limitaciones | Orientado a eventos/alertas de seguridad; componentes centrales demandan RAM/disco; el agente y reglas de Wazuh no serán entregables de aprendizaje. | Más genérico y flexible, pero requiere modelar índices/pipelines; Kibana/Elastic features pueden variar por licencia; más decisiones de configuración. |
-| Estado | **pendiente** — no instalado ni medido en el equipo del usuario. | **pendiente** — no instalado ni medido en el equipo del usuario. |
+| Estado | **VALIDADO** — Wazuh 4.9.0 Single-node en Docker Desktop/macOS Apple Silicon. Ingesta comprobada; consumo y CPU medidos. Tiempo exacto de instalación no aportado. | **Pendiente / descartado por recursos** — no se realizó prueba comparable; se priorizó Wazuh. |
 
-### Lectura provisional (no es selección)
-El requisito publicado de Wazuh all-in-one es 8 GiB RAM y 50 GB para el escenario 1–25 agentes/90 días. Elastic publica un mínimo de 4 GB asignados a Docker Desktop para su quickstart de desarrollo, pero no un mínimo universal de disco o RAM para un stack completo. No son pruebas equivalentes ni permiten declarar ganador. En un Mac de 24 GB ambos podrían ser candidatos, pero VM/Docker, macOS y otras cargas compiten por recursos; hace falta medirlos. **Decisión: abierta.**
+### Decisión de laboratorio
+**Wazuh 4.9.0 Single-node queda seleccionado y validado** para este programa, con Docker Desktop en macOS Apple Silicon. Docker Desktop tenía 11.72 GiB asignados; el stack consumió aproximadamente 2.9 GB (Indexer 1.66 GB, Manager 911 MB y Dashboard 382 MB), con CPU inferior al 4%. La ingesta de un log sintético de fallo SSH produjo la regla 5710 (nivel 5) y el mapeo MITRE ATT&CK T1110.001 (Password Guessing).
 
-## Prueba reproducible para ambas candidatas
+**ELK queda pendiente / descartado por recursos para este entorno y alcance.** No se instaló ni se comparó en una prueba equivalente; no debe presentarse como benchmark que demuestre mayor consumo de ELK. El tiempo exacto de instalación de Wazuh no fue suministrado y permanece sin medir.
+
+## Registro de validación física — Wazuh 4.9.0
+
+- Entorno: Docker Desktop en macOS, Apple Silicon.
+- Memoria asignada a Docker Desktop: 11.72 GiB.
+- Despliegue: Wazuh 4.9.0 Single-node.
+- Consumo aproximado: 2.9 GB total (Indexer 1.66 GB; Manager 911 MB; Dashboard 382 MB).
+- CPU observada: inferior al 4%.
+- Ingesta: exitosa; log sintético de fallo SSH.
+- Resultado: regla 5710, nivel 5; MITRE ATT&CK T1110.001 — Password Guessing.
+- Tiempo de instalación: no registrado en la información entregada.
+- Estado: **validado para el laboratorio de aprendizaje**.
+
+## Prueba reproducible para futuras revisiones
 
 1. Registrar fecha, versión, arquitectura, SO invitado/host y espacio libre antes de empezar.
 2. Usar la misma VM Linux o entorno Docker limpio, mismo límite de CPU/RAM y mismo dataset.
@@ -50,7 +64,7 @@ El requisito publicado de Wazuh all-in-one es 8 GiB RAM y 50 GB para el escenari
 
 **Elastic:** iniciar Elasticsearch y Kibana con el quickstart oficial de Docker; crear un índice de laboratorio; indexar JSON por API REST; ejecutar una consulta de búsqueda y una agregación por event_type. No exponer el puerto a Internet.
 
-**Wazuh:** completar quickstart all-in-one en Linux; para prueba de ingestión usar el mecanismo documentado de recepción/indexación soportado por la versión seleccionada y verificar documento en el indexer. Si la ingesta directa de JSON requiere agente/configuración adicional, registrar el paso como dependencia y no simular éxito.
+**Wazuh (validación ya completada):** la prueba local usó Wazuh 4.9.0 Single-node en Docker Desktop/macOS Apple Silicon. El log sintético de fallo SSH produjo la regla 5710 (nivel 5), con mapeo T1110.001. Para repetir, consultar `srcip`, `srcuser` y `rule.mitre.id` en la alerta procesada.
 
 ## Fuentes oficiales
 - Wazuh [Quickstart y requisitos](https://documentation.wazuh.com/current/quickstart.html)
