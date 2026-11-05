@@ -31,7 +31,7 @@ Si la instalación o una dificultad técnica consume tiempo, no se recorta la pr
 
 ## Auditoría y control de calidad
 
-La ruta está en auditoría pedagógica y técnica. Se revisarán objetivos, secuencia, recursos, tiempos, prácticas, evidencias, evaluaciones, laboratorios y dependencias de herramientas. El calendario permanece pausado hasta aprobar la revisión. Las correcciones se registrarán en el repositorio antes de preparar los eventos.
+La revisión estructural y las correcciones curriculares principales están registradas en [auditoría de sesiones](session-audit.md). La auditoría de ejecución aún requiere probar los laboratorios y validar las dependencias de Power BI y SIEM. El calendario permanece pausado hasta cerrar esas puertas y revisar la sincronización.
 
 ## Ruta de las 90 sesiones
 
