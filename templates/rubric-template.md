@@ -26,7 +26,7 @@ Aprobación sugerida: mínimo 12/16 y ningún criterio por debajo de 2. Si no ap
 | 1 — HTTP/SQL | Consulta de eventos web sintéticos por ruta y estado | JOIN, filtros, granularidad, conteo conciliado y secretos excluidos |
 | 2 — Python/APIs | Pipeline CSV/JSON con salida limpia y rechazos | Tipos, nulos, duplicados, excepciones, conteos entrada/salida y trazabilidad |
 | 3 — Power BI | Modelo y dashboard de métricas | Granularidad, relaciones, medidas reconciliadas, filtros y límites de RLS |
-| 4 — Logs/ATT&CK/SIEM | Consulta, tabla de clasificación y dashboard de calidad | UTC, cobertura, etiquetas con confianza, duplicados y diferencia evento/alerta/incidente |
+| 4 — Logs/ATT&CK/Wazuh | Consulta de alerta SSH, tabla log→T1110.001 y dashboard de calidad | Regla 5710/nivel 5, `srcip`, `srcuser`, `rule.mitre.id`, cobertura/nulos/duplicados, reproducibilidad y diferencia entre evento, alerta e incidente |
 | 5 — Gobierno | Inventario, linaje, matriz de acceso e informe | Propósito, minimización, reglas de calidad, control existente vs propuesto y riesgo residual |
 
 ## Hoja de evaluación
