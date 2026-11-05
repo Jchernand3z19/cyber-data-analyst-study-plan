@@ -1,6 +1,6 @@
 # Tracker — 90 sesiones
 
-**Ritmo:** lunes a sábado, 08:00–09:30 (America/Tegucigalpa). La preparación del entorno se registra por separado y no cuenta dentro de estas 90 sesiones. Consulta el [plan detallado](curriculum/session-plan.md) para objetivos, recursos, prácticas y evidencias.
+**Semana operativa (America/Tegucigalpa):** lunes Normal, martes Normal, miércoles Laboratorio (o Normal si la fase no tiene lab), jueves Normal, viernes **Libre — no tocar**, sábado Repaso (45–60 min), domingo **Libre — no tocar**. Los bloques normales/laboratorio son de 90 min; el repaso no añade una sesión al conteo de las 90. La preparación del entorno se registra por separado. Consulta el [plan detallado](curriculum/session-plan.md) para objetivos, recursos, prácticas y evidencias.
 
 **Estado inicial:** todas las sesiones están pendientes. No marques una sesión como completada hasta que exista evidencia y se haya aprobado la evaluación.
 
