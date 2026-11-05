@@ -18,7 +18,7 @@ Al finalizar, deberías poder:
 
 | Fase | Días | Enfoque | Guía |
 |---|---:|---|---|
-| 1 | 1–18 | HTTP, SQL y fundamentos de seguridad | [Abrir fase 1](phases/phase-01-http-sql/README.md) |
+| 1 | 1–18 | Redes, HTTP, SQL y fundamentos de seguridad | [Abrir fase 1](phases/phase-01-http-sql/README.md) |
 | 2 | 19–36 | Python, APIs y calidad de datos | [Abrir fase 2](phases/phase-02-python-apis/README.md) |
 | 3 | 37–52 | Power BI y analítica segura | [Abrir fase 3](phases/phase-03-power-bi/README.md) |
 | 4 | 53–70 | Logs, detección y fundamentos SIEM | [Abrir fase 4](phases/phase-04-siem-logs/README.md) |
@@ -26,12 +26,16 @@ Al finalizar, deberías poder:
 
 ## Navegación rápida
 
-- [Diseño operativo y preparación](curriculum/README.md) — herramientas, duración y estructura de cada sesión.\n- [Plan detallado de las 90 sesiones](curriculum/session-plan.md) — objetivos, recursos, prácticas y evidencias.\n- [Tracker de las 90 sesiones](tracker.md) — fuente oficial del estado de cada día.
+- [Diseño operativo y preparación](curriculum/README.md) — herramientas, duración y estructura de cada sesión.
+- [Plan detallado de las 90 sesiones](curriculum/session-plan.md) — objetivos, recursos, prácticas y evidencias.\n- [Tracker de las 90 sesiones](tracker.md) — fuente oficial del estado de cada día.
 - [Lección del día 1](lessons/day-01-http-client-server.md) — primera sesión desarrollada paso a paso.
 - [Registros diarios](daily-logs/README.md) — formato y reglas para guardar evidencia aprobada.
 - [Laboratorios y scripts](labs/README.md) — prácticas reproducibles con datos sintéticos.
 - [Integración con Google Calendar](integrations/google-calendar/README.md) — configuración y funcionamiento de recordatorios.
 - [Workflow de sincronización de calendario](.github/workflows/sync-study-calendar.yml).
+- [Auditoría curricular](curriculum/session-audit.md) — hallazgos y dependencias pendientes.
+- [Hitos PharmaTracker](curriculum/pharmatracker-milestones.md) — entregables acumulativos.
+- [Evaluación y recuperación](curriculum/evaluation-and-remediation.md) — rúbrica común.
 
 ## Progreso
 
@@ -78,7 +82,8 @@ Si una sesión queda incompleta, se retoma antes de avanzar. No se inventan fech
 ├── integrations/
 │   └── google-calendar/     # Sincronización con Google Calendar
 ├── labs/                    # Laboratorios reproducibles y datos sintéticos
-├── lessons/                 # Lecciones desarrolladas por día\n├── curriculum/              # Diseño operativo y plan detallado de 90 sesiones
+├── lessons/                 # Lecciones desarrolladas por día
+├── curriculum/              # Diseño operativo y plan detallado de 90 sesiones
 ├── phases/                  # Guías, prácticas y entregables por fase
 └── tracker.md               # Seguimiento oficial de las 90 sesiones
 ```
