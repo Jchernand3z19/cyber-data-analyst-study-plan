@@ -7,7 +7,7 @@ This integration manages study sessions directly through the Google Calendar API
 - Monday-Saturday: 08:00-09:30
 - Time zone: `America/Tegucigalpa`
 - A popup reminder is planned for 10 minutes before each session.
-- The workflow is currently manual-only. Its scheduled trigger is intentionally paused until calendar access is verified and the migration is approved for execution.
+- The workflow is manual-only. It defaults to a read-only dry run; actual changes require selecting the explicit 'apply_changes' confirmation input. Its scheduled trigger remains paused.
 
 The sync script is prepared to replace only the two legacy recurring series marked `[SDA-WEEKDAYS]` and `[SDA-SATURDAY]`, then create three setup events and 90 individually titled sessions. Each event includes the objective, reading resource, practice, expected evidence and a 10-minute reminder. It uses stable markers to avoid duplicates and retains the original start date on retries.
 
@@ -44,7 +44,7 @@ Do not put either value in repository files, issues, commits, or chat.
 
 ## Test
 
-Open the [Sync study calendar workflow](https://github.com/Jchernand3z19/security-data-analyst-learning-path/actions/workflows/sync-study-calendar.yml), choose **Run workflow**, and inspect the run logs. Run the workflow only after the migration logic has been reviewed and the calendar has been verified. A successful run must report created, updated and skipped items without printing credentials.
+Open the [Sync study calendar workflow](https://github.com/Jchernand3z19/security-data-analyst-learning-path/actions/workflows/sync-study-calendar.yml) and choose **Run workflow**. Leave 'apply_changes' unchecked for a read-only dry run; inspect the planned counts and logs. Only after reviewing the exact migration should the explicit confirmation be selected. A dry run must not delete or create events. Never paste credentials into logs or chat.
 
 ## Security
 
