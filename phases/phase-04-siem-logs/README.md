@@ -1,72 +1,52 @@
-# Fase 4 — Logs, detección y fundamentos SIEM
+# Fase 4 — Logs y análisis de datos de seguridad
 
 ## Objetivo
 
-Analizar eventos sintéticos, identificar patrones explicables, priorizar señales, controlar falsos positivos y redactar hallazgos con evidencia reproducible.
+Analizar datos sintéticos de eventos para producir consultas, tablas agregadas, métricas de calidad e informes reproducibles. El dato es el objetivo; la seguridad es el dominio de aplicación.
 
 ## Secuencia de estudio
 
-| Días | Tema | Evidencia mínima |
+| Días | Tema | Evidencia de datos |
 |---|---|---|
-| 53–56 | Estructura de logs, tiempo, severidad, eventos/alertas/incidentes | Diccionario de campos |
-| 57–60 | Fallos de autenticación, entradas sospechosas y anomalías | Reglas sencillas sobre datos sintéticos |
-| 61–65 | Falsos positivos, enriquecimiento, correlación y priorización | Tabla de pruebas y razonamiento de riesgo |
-| 66–70 | Triage, conservación, minimización e investigación integrada | Informe de caso |
+| 53–56 | Estructura, tiempo, calidad y categorías de eventos | Diccionario, perfilado y tablas de calidad |
+| 57–60 | Filtrado, agregación y análisis temporal | Consultas y tablas por tipo, resultado e intervalo |
+| 61–65 | Comparación de patrones, contexto y criterios de riesgo | Matrices de conteos, métricas e informe |
+| 66–70 | Cobertura, retención, minimización y síntesis | Tablas analíticas y reporte ejecutivo |
 
-## Plataforma recomendada: Splunk Cloud Platform Trial
+## Plataforma SIEM: decisión pendiente
 
-El laboratorio Python es una preparación reproducible, no experiencia SIEM. Se propone Splunk Cloud Platform Trial para evitar una instalación local. La guía oficial indica una prueba Cloud de duración limitada (15 días y hasta 5 GB/día en la documentación consultada); crea la cuenta y activa la prueba únicamente al comenzar esta fase. Verifica las condiciones vigentes antes de registrarte. La alternativa Splunk Enterprise Trial dura 60 días, pero requiere instalar software en Windows o Linux; no se asume compatible con macOS ARM ni con Windows ARM emulado.
+Splunk Cloud Trial queda descartado como solución única porque no es local ni reproducible sin coste. La herramienta SIEM **no está decidida**. Las candidatas son **Wazuh (local, open source)** y **ELK (local, open source)**. La decisión queda pendiente de una prueba real de instalación y consumo de recursos; consulta el [checklist de validación](../../templates/lab-validation-checklist.md).
 
-Recursos: [requisitos del tutorial y duración de pruebas](https://help.splunk.com/en/splunk-enterprise/search/search-tutorial/10.6/part-1-getting-started/what-you-need-for-this-tutorial), [referencia SPL](https://help.splunk.com/en/splunk-enterprise/search/spl-search-reference/10.4/introduction/welcome-to-the-search-reference).
+No se activa una cuenta trial ni se declara compatible una plataforma antes de probarla. Mientras la decisión está pendiente, se pueden estudiar los datasets y scripts locales de esta fase sin afirmar que se ha utilizado un SIEM.
 
-Para aprobar, carga solo el CSV sintético de este repositorio, ejecuta búsquedas, filtros, agregaciones y una regla temporal en la instancia y guarda evidencia saneada.
+## Laboratorios y datos
 
-## Laboratorio SPL
-
-Usa el [guion de consultas Splunk](../../labs/phase-04-log-analysis/splunk-search-lab.md) después de cargar el CSV sintético en la instancia de prueba. Las consultas son plantillas didácticas: ajusta index y sourcetype a los nombres que realmente hayas configurado.
-
-## Laboratorio ejecutable
-
-Complementa esta guía con el [laboratorio de análisis de logs](../../labs/phase-04-log-analysis/README.md), que incluye eventos sintéticos y un script Python para aplicar una regla de detección didáctica.
+- [Laboratorio de análisis de logs](../../labs/phase-04-log-analysis/README.md): eventos sintéticos y análisis reproducible con Python.
+- [Checklist de validación](../../templates/lab-validation-checklist.md): registro de versión, SO, setup, RAM, disco y resultado mínimo.
 
 ## Esquema sintético de eventos
 
-Usa campos como:
+Campos sugeridos:
 `timestamp_utc, event_type, user_alias, source_label, outcome, severity, request_id`.
 
-Los alias y etiquetas deben ser ficticios. No recolectes logs de cuentas o sistemas ajenos.
+Los alias y etiquetas son ficticios. No recolectes registros de cuentas o sistemas ajenos.
 
-## Laboratorio
+## Prácticas de análisis
 
-Crea eventos ficticios que incluyan:
-- autenticaciones exitosas y fallidas;
-- varias fallas cercanas en el tiempo para un mismo alias;
-- eventos normales que permitan medir falsos positivos;
-- una marca temporal malformada;
-- una entrada duplicada.
+1. Perfila el dataset: filas, campos, nulos, duplicados y timestamps inválidos.
+2. Normaliza fechas a UTC y conserva conteos de registros válidos e inválidos.
+3. Resume eventos por tipo, resultado, alias ficticio y periodo.
+4. Compara grupos temporales y documenta umbrales analíticos como parámetros, no como controles operativos.
+5. Cuantifica falsos positivos potenciales y límites del conjunto de datos.
+6. Analiza volumen, antigüedad y campos sensibles para producir tablas de calidad y minimización.
+7. Presenta hallazgos con cobertura, incertidumbre y limitaciones.
 
-Define una regla explicable, por ejemplo: alertar cuando haya al menos cinco fallos de autenticación para un alias dentro de una ventana de diez minutos. Esta regla es didáctica, no un estándar universal. Registra la ventana, el umbral, los casos detectados y los falsos positivos.
+## Evidencias esperadas
 
-Después:
-1. Normaliza marcas temporales a UTC y conserva el dato original sintético cuando sea necesario.
-2. Ordena eventos por tiempo y correlaciona solo mediante identificadores disponibles.
-3. Separa evento, alerta e incidente.
-4. Prioriza por impacto potencial, probabilidad y calidad de evidencia.
-5. Escribe un resumen con qué pasó, alcance conocido, evidencia, incertidumbre y siguiente paso.
-6. Evita afirmar que una cuenta fue comprometida solo por ver varios fallos.
+- Dataset sintético documentado.
+- Consultas reproducibles y tablas agregadas.
+- Reporte de calidad de eventos y análisis temporal.
+- Tabla de cobertura, falsos positivos potenciales y limitaciones.
+- Informe breve de hallazgos basado en evidencia.
 
-## Seguridad de logs
-
-Nunca registres contraseñas, tokens de sesión, claves API ni cuerpos completos si contienen datos personales. Aplica minimización, control de acceso y retención definida. Los logs también son datos que requieren protección.
-
-## Entregables
-
-- Dataset de eventos sintéticos.
-- Regla de detección documentada y probada con casos positivos y negativos.
-- Tabla de falsos positivos y limitaciones.
-- Informe de triage con evidencia y nivel de confianza.
-- Nota de minimización y retención de los datos.
-
-## Criterios de aprobación
-
-Puedes reproducir la regla Python, explicar el umbral, mostrar al menos un positivo y un negativo, describir falsos positivos y separar observación de hipótesis. Además, debes demostrar consultas nativas en la plataforma SIEM elegida y adjuntar evidencia saneada de búsqueda y agregación. La evaluación no premia alertas dramáticas; premia conclusiones proporcionadas a la evidencia.
+La evidencia de cada sesión es un producto de datos (consulta, tabla, dashboard o informe), no una regla operativa, playbook ni respuesta a incidentes.
