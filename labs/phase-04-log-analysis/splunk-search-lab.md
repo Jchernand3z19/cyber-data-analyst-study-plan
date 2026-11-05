@@ -4,7 +4,7 @@
 
 Activa la prueba de Splunk Cloud únicamente al iniciar la fase 4. Confirma en la página de registro las condiciones, duración y límites vigentes. Usa exclusivamente el archivo sintético sample_auth_events.csv. No cargues logs personales, laborales ni de terceros.
 
-Sigue el tutorial oficial para importar un CSV y abrir Search & Reporting. Define el sourcetype de forma que Splunk reconozca los campos CSV. En los ejemplos siguientes sustituye index y sourcetype por los valores configurados en tu instancia.
+Sigue el tutorial oficial para importar un CSV y abrir Search & Reporting. Define el sourcetype para reconocer los campos CSV. Como el campo de tiempo del archivo se llama timestamp_utc, no asumas que Splunk lo convertirá automáticamente en _time. En las búsquedas temporales usa el rango All time y convierte explícitamente el campo con strptime. Sustituye index y sourcetype por los valores configurados en tu instancia.
 
 ## Consultas iniciales
 
@@ -35,12 +35,15 @@ Prueba una ventana móvil de diez minutos, agrupada por alias:
 
 ```spl
 index=main sourcetype=auth_events event_type=authentication outcome=failure
+| eval _time=strptime(timestamp_utc, "%Y-%m-%dT%H:%M:%SZ")
+| where isnotnull(_time)
+| dedup request_id
 | sort 0 _time
 | streamstats time_window=10m count AS failures_10m BY user_alias
 | where failures_10m >= 5
 ```
 
-Compara los resultados con analyze_auth_logs.py. Documenta diferencias por orden temporal, límites de ventana, duplicados, selección del rango de tiempo y eventos rechazados. No asumas que dos implementaciones son equivalentes solo porque usan el mismo umbral.
+Compara los resultados con analyze_auth_logs.py. Documenta diferencias por orden temporal, límites de ventana, duplicados, selección del rango de tiempo y eventos rechazados. La fila con timestamp inválido se excluye con isnotnull(_time); la segunda fila con request_id repetido se elimina con dedup. No asumas que dos implementaciones son equivalentes solo porque usan el mismo umbral.
 
 ## Evidencia requerida
 
