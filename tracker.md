@@ -63,12 +63,12 @@
 - [ ] Día 52 — Evaluación de fase y revisión del modelo.
 
 ## Fase 4 — Logs, análisis y fundamentos SIEM (Días 53–70)
-- [ ] Día 53 — ATT&CK: clasificar eventos sintéticos por táctica/técnica.
-- [ ] Día 54 — ATT&CK: tabla log→técnica y confianza.
-- [ ] Día 55 — Ingesta de logs sintéticos como fuente de datos.
-- [ ] Día 56 — Consultas y agregaciones de eventos.
-- [ ] Día 57 — Calidad de logs: nulos, duplicados y formatos.
-- [ ] Día 58 — Dashboard de reporting de eventos y calidad.
+- [ ] Día 53 — ATT&CK: clasificar el evento SSH validado (Wazuh 5710 / T1110.001).
+- [ ] Día 54 — ATT&CK: tabla log→técnica con `rule.mitre.id`, confianza y datos faltantes.
+- [ ] Día 55 — Wazuh: consultar alerta SSH y documentar `srcip`, `srcuser`, regla y nivel.
+- [ ] Día 56 — Wazuh: filtrar/agregar por `rule.id`, `rule.mitre.id`, `srcip` y `srcuser`.
+- [ ] Día 57 — Calidad de alertas Wazuh: nulos, duplicados y formatos.
+- [ ] Día 58 — Dashboard de reporting: volumen, regla/nivel, IP, usuario y técnica.
 - [ ] Día 59 — Consultas SPL de filtrado y agregación.
 - [ ] Día 60 — Detección temporal con SPL y ventana móvil.
 - [ ] Día 61 — Falsos positivos y ajuste de reglas.
