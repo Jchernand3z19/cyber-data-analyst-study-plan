@@ -1,12 +1,12 @@
-# Laboratorio — Análisis básico de logs
+# Laboratorio — Perfilado analítico de logs sintéticos
 
-**Fase:** 4 — Logs, detección y fundamentos SIEM.
+**Fase:** 4 — Logs y análisis de datos de seguridad.
 
 ## Objetivo
 
-Normalizar y analizar eventos ficticios para identificar posibles patrones de autenticación fallida. La regla es didáctica y no demuestra por sí sola un compromiso.
+Convertir registros sintéticos en tablas de análisis y métricas de calidad. Este laboratorio no genera alertas, no implementa reglas de detección y no ejecuta respuesta operativa.
 
-## Ejecución
+## Ejecución local
 
 Desde la raíz del repositorio:
 
@@ -14,15 +14,30 @@ Desde la raíz del repositorio:
 python3 labs/phase-04-log-analysis/analyze_auth_logs.py
 ```
 
-El script lee `sample_auth_events.csv` y genera `output/alerts.csv` y `output/analysis_report.json`.
+El script lee sample_auth_events.csv y genera:
+- output/valid_events.csv
+- output/event_summary.csv
+- output/quality_report.json
 
-## Regla didáctica
+## Resultado esperado con el CSV incluido
 
-Genera una alerta cuando un alias acumula al menos cinco fallos dentro de una ventana móvil de diez minutos. Los eventos con fecha inválida se reportan como rechazados; los duplicados exactos se ignoran para no contar dos veces la misma evidencia.
+- 9 filas de entrada.
+- 7 eventos válidos.
+- 2 filas rechazadas: un request_id duplicado (R-005) y un timestamp inválido.
+- La tabla resumen muestra conteos por event_type y outcome.
+- El informe conserva el motivo de cada rechazo.
 
-## Preguntas
+Si el resultado difiere, revisa versión del archivo y ejecución. Estos valores son esperados por inspección del CSV; no se afirma que el script haya sido ejecutado en el equipo del usuario.
 
-1. ¿Por qué una alerta no equivale a un incidente confirmado?
-2. ¿Qué falsos positivos puede generar esta regla?
-3. ¿Qué contexto adicional necesitarías antes de escalar el hallazgo?
-4. ¿Qué información sensible no debe incluirse en un log?
+## Sesiones y evidencias
+- ATT&CK como vocabulario descriptivo: [attack-context.md](attack-context.md).
+- Ticket de contexto triage: [triage-data-template.md](triage-data-template.md).
+- La selección SIEM y su ingesta real siguen pendientes hasta completar [checklist](../../templates/lab-validation-checklist.md).
+
+## Preguntas analíticas
+1. ¿Qué proporción de filas quedó válida? Indica numerador y denominador.
+2. ¿Qué campo concentra el rechazo y por qué?
+3. ¿Cómo cambiaría el conteo si no se deduplicara request_id?
+4. ¿Qué contexto faltaría para interpretar los fallos de autenticación?
+5. ¿Por qué estos conteos no prueban un incidente?
+
