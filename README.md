@@ -50,7 +50,7 @@ Consulta el [checklist de validación](templates/lab-validation-checklist.md) y 
 | Sábado | Repaso | Consolidación (45–60 min), no añade sesión |
 | Domingo | **Libre — no tocar** | Descanso |
 
-Cada semana contiene cuatro bloques de avance de lunes a jueves. Nunca se programan dos laboratorios seguidos; en Fase 4, máximo dos laboratorios por semana. Los días libres no se utilizan para recuperar ni adelantar contenido.
+**Horario del bloque diario de estudio: 08:00 - 09:30 AM (America/Tegucigalpa).** Cada semana contiene cuatro bloques de avance de lunes a jueves. Nunca se programan dos laboratorios seguidos; en Fase 4, máximo dos laboratorios por semana. Los días libres no se utilizan para recuperar ni adelantar contenido.
 
 ## Duración estimada por fase
 
@@ -67,7 +67,7 @@ Cada semana contiene cuatro bloques de avance de lunes a jueves. Nunca se progra
 
 **Aviso al inicio de cada fase: Día 1 incluye instalación (~1 h extra), el resto no.** En Fase 4, Wazuh 4.9.0 ya está instalado y validado en el entorno descrito; no repetir instalación salvo que el laboratorio se reconstruya.
 
-Los 90 minutos son el bloque de aprendizaje, no la jornada completa: 10 min recuperación, 20 explicación, 35 práctica guiada, 15 ejercicio individual y 10 evidencia/reflexión. El repaso de sábado dura 45–60 minutos.
+**Horario del bloque de estudio: 08:00 - 09:30 AM.** Los 90 minutos son el bloque de aprendizaje, no la jornada completa: 10 min recuperación, 20 explicación, 35 práctica guiada, 15 ejercicio individual y 10 evidencia/reflexión. El repaso de sábado dura 45–60 minutos.
 
 ## Coste y herramientas
 
