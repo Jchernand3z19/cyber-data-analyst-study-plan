@@ -1,5 +1,7 @@
 # Fase 0 — Fundamentos previos (opcional)
 
+> **Aviso de fase:** Día 1 incluye instalación (~1 h extra), el resto no. Si no se requiere instalar una herramienta en esta fase, utiliza ese tiempo para verificar versiones y abrir los archivos de práctica.
+
 **Estado:** opcional. Puedes saltarla si ya dominas los fundamentos; utiliza el [test de nivel inicial](../../templates/initial-level-assessment.md) para decidir. Esta fase no suma ni modifica las 90 sesiones principales.
 
 ## Objetivo
