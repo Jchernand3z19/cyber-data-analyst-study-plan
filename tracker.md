@@ -62,7 +62,7 @@
 - [ ] Día 51 — Revisión de accesibilidad y claridad.
 - [ ] Día 52 — Evaluación de fase y revisión del modelo.
 
-## Fase 4 — Logs, detección y fundamentos SIEM (Días 53–70)
+## Fase 4 — Logs, análisis y fundamentos SIEM (Días 53–70)
 - [ ] Día 53 — ATT&CK: clasificar eventos sintéticos por táctica/técnica.
 - [ ] Día 54 — ATT&CK: tabla log→técnica y confianza.
 - [ ] Día 55 — Ingesta de logs sintéticos como fuente de datos.
