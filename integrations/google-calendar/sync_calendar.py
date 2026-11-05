@@ -201,19 +201,40 @@ def main() -> None:
     items = [(item, "preparation") for item in SETUP]
     items.extend((item, "learning session") for item in sessions)
 
-    # Validate the complete curriculum before touching any existing calendar event.
-    removed = remove_legacy_series(service, calendar_id)
+    # Default to a read-only dry run. Calendar migration requires an explicit workflow input.
+    apply_changes = os.environ.get("APPLY_CALENDAR_CHANGES", "false").strip().lower() == "true"
+    legacy_series = [
+        event
+        for event in list_events(service, calendar_id, title=LEGACY_TITLE, single_events=False)
+        if any(marker in event.get("description", "") for marker in LEGACY_MARKERS)
+    ]
     existing = existing_events(service, calendar_id)
     already = set(existing)
     anchor = anchor_from_existing(existing) or next_study_day()
     dates = list(study_dates(anchor, len(items)))
+    planned = [
+        (item, kind, day)
+        for (item, kind), day in zip(items, dates)
+        if item["marker"] not in already
+    ]
+
+    if not apply_changes:
+        print(
+            "DRY RUN ONLY — no calendar events were changed. "
+            f"legacy_series_matching_markers={len(legacy_series)}, "
+            f"would_create={len(planned)}, already_present={len(items) - len(planned)}. "
+            "Set APPLY_CALENDAR_CHANGES=true only after reviewing this plan."
+        )
+        return
+
+    removed = 0
+    for event in legacy_series:
+        service.events().delete(calendarId=calendar_id, eventId=event["id"]).execute()
+        removed += 1
+        print(f"Removed legacy recurring series: {event['id']}")
 
     created = 0
-    skipped = 0
-    for (item, kind), day in zip(items, dates):
-        if item["marker"] in already:
-            skipped += 1
-            continue
+    for item, kind, day in planned:
         service.events().insert(
             calendarId=calendar_id,
             body=event_body(item, day, kind),
@@ -223,7 +244,7 @@ def main() -> None:
 
     print(
         f"Calendar sync complete: removed_legacy_series={removed}, "
-        f"created={created}, already_present={skipped}, "
+        f"created={created}, already_present={len(items) - len(planned)}, "
         f"schedule=Mon-Sat 08:00-09:30, timezone={TZ_NAME}."
     )
 
