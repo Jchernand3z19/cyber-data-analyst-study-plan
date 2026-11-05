@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Sync the 3 setup sessions and 90 detailed study sessions to Google Calendar.
+"""Plan or explicitly apply the 3 setup and 90 study sessions in Google Calendar.
 
-This migration removes only the two legacy recurring series created by the
-previous version of this script (identified by exact markers), then creates
+The default execution is read-only. Actual migration removes only the two
+legacy recurring series identified by exact program-owned markers, then creates
 idempotent, individually described events from curriculum/session-plan.md.
 """
 from __future__ import annotations
