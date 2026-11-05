@@ -1,6 +1,6 @@
 # Auditoría de las 90 sesiones
 
-**Estado:** revisión estructural realizada; auditoría técnica de ejecución y SIEM pendiente.  
+**Estado:** revisión estructural realizada; ejecución de laboratorios y validación de plataforma SIEM pendientes.  
 **Calendario:** pausado. No sincronizar ni programar sesiones hasta cerrar las puertas de preparación y las decisiones técnicas.
 
 ## Resultado de revisión estructural
@@ -13,7 +13,7 @@ Se revisaron los objetivos, recursos, prácticas y evidencias del plan de sesion
 | 8–18 SQL/seguridad | Adecuado con refuerzo | Buen recorrido SQL; concretar permisos como diseño conceptual en SQLite y no afirmar que SQLite demuestra administración empresarial de roles |
 | 19–36 Python/API/calidad | Adecuado con mejoras | Secuencia coherente; mejorar pruebas automatizadas y trazabilidad de rechazos |
 | 37–52 Power BI | Condicionado | Modelo y seguridad pertinentes; ejecución real depende de validar Windows virtualizado, Power BI Desktop y licencia |
-| 53–70 Logs/SIEM | Incompleto | Análisis Python útil pero no sustituye una plataforma SIEM; consultas nativas y experiencia de búsqueda siguen pendientes de seleccionar y probar |
+| 53–70 Logs/SIEM | En diseño, falta validar acceso | Se propone Splunk Cloud Trial y ya se incorporó una guía de SPL; la instancia y consultas aún no se han ejecutado |
 | 71–90 Gobierno/proyecto | Adecuado con mejoras | El cierre cubre gobierno y riesgo, pero faltaba una progresión explícita del proyecto; se añade roadmap acumulativo |
 
 ## Hallazgos técnicos de laboratorios
@@ -31,11 +31,11 @@ Se revisaron los objetivos, recursos, prácticas y evidencias del plan de sesion
 - Se añade roadmap acumulativo de PharmaTracker.
 - Se añade rúbrica común y recuperación.
 - Se refuerza en la Fase 1 el contexto DNS/red e identidad/autorización.
-- Se añade una puerta explícita para SIEM real y consultas nativas antes de cerrar Fase 4.
+- Se propone Splunk Cloud Trial para evitar instalación local y se incorpora laboratorio con consultas SPL; falta validar la instancia al iniciar la fase 4.
 
 ## Pendientes que impiden aprobar y activar el calendario
 
-1. Decidir y validar plataforma SIEM y método de acceso compatible con el entorno disponible; luego ajustar sesiones 53–70 con consultas ejecutadas.
+1. Activar y validar Splunk Cloud Trial al iniciar la fase 4 (prueba temporal); ejecutar y guardar evidencia de las consultas SPL del laboratorio.
 2. Completar P3: verificar Windows virtualizado y Power BI Desktop real en el Mac; documentar rendimiento y licencia.
 3. Ejecutar los cuatro laboratorios desde cero y registrar salidas; verificar que los resultados esperados coinciden con los datasets.
 4. Completar comprobación de enlaces externos y revisar permisos/visibilidad del repositorio antes de publicar datos de práctica.
