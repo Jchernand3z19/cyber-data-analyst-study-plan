@@ -13,6 +13,10 @@ Construir un modelo analítico comprensible y verificable para PharmaTracker, co
 | 45–49 | RLS, privilegio mínimo, clasificación, anonimización y exportación | Matriz de acceso y revisión de riesgos |
 | 50–52 | Definiciones, accesibilidad y evaluación | Diccionario de métricas y reporte final |
 
+## Puerta obligatoria antes de iniciar
+
+Esta fase requiere Power BI Desktop real en el Windows virtualizado del Mac. Antes de comenzar, confirma instalación y apertura, carga de los CSV del laboratorio, ejecución de Power Query y medidas DAX, rendimiento suficiente y acceso a las funciones/licencia necesarias. No reemplaces esta práctica por otra herramienta ni marques la preparación como aprobada sin evidencia. Si el entorno falla, documenta el bloqueo y resuélvelo antes de iniciar las sesiones 37–52.
+
 ## Laboratorio con archivos CSV y medidas DAX
 
 Usa el [laboratorio de modelo analítico para Power BI](../../labs/phase-03-power-bi/README.md), que incluye tablas sintéticas y medidas de referencia para validar manualmente.
