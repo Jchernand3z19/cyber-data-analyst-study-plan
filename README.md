@@ -1,5 +1,7 @@
 # Ruta de aprendizaje — Security Data Analyst
 
+[![Licencia MIT](https://img.shields.io/badge/Licencia-MIT-green.svg)](LICENSE) [![Wazuh](https://img.shields.io/badge/Wazuh-4.9.0-blue.svg)](https://documentation.wazuh.com/4.9/) ![Estado](https://img.shields.io/badge/Estado-Completado-brightgreen.svg) ![Nivel](https://img.shields.io/badge/Nivel-Introductorio-informational.svg)
+
 Programa introductorio de 90 sesiones para desarrollar criterio analítico aplicado al dominio de la seguridad. La prioridad es producir datos interpretables y evidencia reproducible, no operar un SOC.
 
 ## Perfil objetivo
@@ -12,7 +14,8 @@ Programa introductorio de 90 sesiones para desarrollar criterio analítico aplic
 
 ## Alcance y no-alcance
 
-Es un programa **INTRODUCTORIO**. No garantiza empleabilidad, no sustituye experiencia real en un SOC y no equivale a una certificación profesional. Tampoco forma administradores de infraestructura ni especialistas de pentesting.
+> [!IMPORTANT]
+> Este es un programa **INTRODUCTORIO**. No garantiza empleabilidad, no sustituye experiencia real en un SOC y no equivale a una certificación profesional. Tampoco forma administradores de infraestructura ni especialistas de pentesting.
 
 El dato es el objetivo; la seguridad es el dominio de aplicación. Las prácticas usan datos sintéticos, públicos o expresamente autorizados. Cada sesión relacionada con seguridad debe terminar en una evidencia de datos: consulta, tabla, dashboard o informe. No se pide producir reglas operativas, playbooks ni respuestas a incidentes.
 
@@ -52,6 +55,18 @@ Consulta el [checklist de validación](templates/lab-validation-checklist.md) y 
 
 **Horario del bloque diario de estudio: 08:00 - 09:30 AM (America/Tegucigalpa).** Cada semana contiene cuatro bloques de avance de lunes a jueves. Nunca se programan dos laboratorios seguidos; en Fase 4, máximo dos laboratorios por semana. Los días libres no se utilizan para recuperar ni adelantar contenido.
 
+## Roadmap visual — 5 fases
+
+```mermaid
+flowchart TD
+    A[Inicio: diagnóstico y fundamentos] --> B[Fase 1 · Días 1–18\nRedes, HTTP, SQL y seguridad]
+    B --> C[Fase 2 · Días 19–36\nPython, APIs y calidad de datos]
+    C --> D[Fase 3 · Días 37–52\nPower BI y analítica segura]
+    D --> E[Fase 4 · Días 53–70\nLogs y análisis de datos de seguridad]
+    E --> F[Fase 5 · Días 71–90\nGobierno, privacidad y proyecto final]
+    F --> G[Evaluación y paquete final de evidencias]
+```
+
 ## Duración estimada por fase
 
 | Fase | Sesiones | Estimación |
@@ -65,7 +80,8 @@ Consulta el [checklist de validación](templates/lab-validation-checklist.md) y 
 
 ## Instalación y tiempo de estudio
 
-**Aviso al inicio de cada fase: Día 1 incluye instalación (~1 h extra), el resto no.** En Fase 4, Wazuh 4.9.0 ya está instalado y validado en el entorno descrito; no repetir instalación salvo que el laboratorio se reconstruya.
+> [!TIP]
+> Antes de cada sesión de laboratorio, inicia Docker Desktop y comprueba que el motor esté funcionando. **Aviso al inicio de cada fase:** Día 1 incluye instalación (~1 h extra), el resto no. En Fase 4, Wazuh 4.9.0 ya está instalado y validado en el entorno descrito; no repetir instalación salvo que el laboratorio se reconstruya.
 
 **Horario del bloque de estudio: 08:00 - 09:30 AM.** Los 90 minutos son el bloque de aprendizaje, no la jornada completa: 10 min recuperación, 20 explicación, 35 práctica guiada, 15 ejercicio individual y 10 evidencia/reflexión. El repaso de sábado dura 45–60 minutos.
 
@@ -106,9 +122,13 @@ Cada fase tiene quiz y debugging. La Fase 4 tiene una evaluación adaptada al ca
 - **Sistema operativo:** macOS (Apple Silicon o Intel), Windows 10/11 con WSL2, o Linux.
 - **Software base:** Docker Desktop instalado y funcionando.
 
-**Este programa es introductorio y no garantiza empleabilidad directa.** Los requisitos son una referencia de preparación; la compatibilidad de cada herramienta también depende de su versión y arquitectura.
+Los requisitos son una referencia de preparación; la compatibilidad de cada herramienta también depende de su versión y arquitectura.
 
 Consulta el [checklist de laboratorio](templates/lab-validation-checklist.md).
+
+<!-- Aquí va la captura del Dashboard de Wazuh -->
+
+<!-- Aquí va la captura de la terminal -->
 
 ## Documentación de soporte
 
