@@ -217,6 +217,7 @@ Consulta el [checklist de laboratorio](templates/lab-validation-checklist.md).
 - [Mapa de dependencias y exenciones por diagnóstico](docs/dependency-map.md)
 - [Política de datos sintéticos](docs/data-synthetic-policy.md)
 - [Mantenimiento del repositorio](MAINTENANCE.md)
+- [Guía de uso diario y sincronización con Google Calendar](docs/how-to-use.md)
 - [Progreso personal de las 90 sesiones](PROGRESS.md)
 - [AUDIT-REPORT.md — informe de auditoría](AUDIT-REPORT.md)
 - [Licencia MIT](LICENSE)
