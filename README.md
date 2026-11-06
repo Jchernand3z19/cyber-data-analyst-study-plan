@@ -1,5 +1,14 @@
 # Ruta de aprendizaje — Security Data Analyst
 
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:1f3a5f&height=180&section=header&text=Security%20Data%20Analyst&fontColor=ffffff&fontSize=38&fontAlignY=38" alt="Security Data Analyst banner" width="100%" />
+</p>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2600&pause=900&color=38BDF8&center=true&vCenter=true&width=600&lines=Data+%2B+Cybersecurity;Hybrid+Profile" alt="Data plus cybersecurity · Hybrid profile" />
+</p>
+
+
 <!-- BANNER: Reemplazar con tu imagen -->
 
 [![Licencia MIT](https://img.shields.io/badge/Licencia-MIT-green.svg)](LICENSE) [![Wazuh](https://img.shields.io/badge/Wazuh-4.9.0-blue.svg)](https://documentation.wazuh.com/4.9/) ![Estado](https://img.shields.io/badge/Estado-Completado-brightgreen.svg) ![Nivel](https://img.shields.io/badge/Nivel-Introductorio-informational.svg)
@@ -13,6 +22,26 @@ Programa introductorio de 90 sesiones para desarrollar criterio analítico aplic
 - Data Quality Analyst con enfoque en seguridad
 - Security Reporting Analyst
 - Junior GRC / Data Governance Analyst
+
+
+### Perfil híbrido del programa
+
+El radar representa de forma **ilustrativa** los cinco perfiles objetivo del programa; no son puntuaciones de aptitud ni resultados de evaluación.
+
+```mermaid
+---
+config:
+  theme: dark
+  radar:
+    axisLabelFontSize: 12
+    curveTension: 0.1
+---
+radar-beta
+  axis "Security Data Analyst" , "Junior Security Analyst (datos)" , "Data Quality Analyst" , "Security Reporting Analyst" , "Junior GRC / Data Governance"
+  curve "Áreas del perfil" { 5, 4, 4, 4, 4 }
+  max 5
+  min 0
+```
 
 ## Alcance y no-alcance
 
@@ -56,6 +85,15 @@ Consulta el [checklist de validación](templates/lab-validation-checklist.md) y 
 | Domingo | **Libre — no tocar** | Descanso |
 
 **Horario del bloque diario de estudio: 08:00 - 09:30 AM (America/Tegucigalpa).** Cada semana contiene cuatro bloques de avance de lunes a jueves. Nunca se programan dos laboratorios seguidos; en Fase 4, máximo dos laboratorios por semana. Los días libres no se utilizan para recuperar ni adelantar contenido.
+
+
+## Dashboard de actividad del repositorio
+
+<p align="center">
+  <img src="assets/metrics.svg" alt="Dashboard de métricas y actividad de commits" width="100%" />
+</p>
+
+El SVG se actualiza diariamente mediante GitHub Actions a partir de la actividad de este repositorio.
 
 ## Arquitectura de Wazuh en Docker
 
