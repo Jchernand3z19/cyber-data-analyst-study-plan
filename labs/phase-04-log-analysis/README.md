@@ -6,6 +6,18 @@
 
 Convertir registros sintéticos en tablas de análisis y métricas de calidad. Este laboratorio no genera alertas, no implementa reglas de detección y no ejecuta respuesta operativa.
 
+## Arquitectura del laboratorio Wazuh 4.9.0
+
+El diagrama representa el flujo lógico de ingesta y consulta de la instalación Single-node validada. Los logs del endpoint llegan al Wazuh Manager; el Manager procesa los eventos y los envía al Wazuh Indexer; el Dashboard consulta el Indexer para visualizarlos.
+
+```mermaid
+flowchart LR
+    L[Endpoint / fuente de logs\nSSH y logs del sistema] -->|Eventos mediante agente o entrada configurada| M[Wazuh Manager\nContenedor 1]
+    M -->|Eventos procesados| I[Wazuh Indexer\nContenedor 2]
+    D[Wazuh Dashboard\nContenedor 3] -->|Consultas y búsquedas| I
+    I -->|Resultados indexados| D
+```
+
 ## Ejecución local
 
 Desde la raíz del repositorio:
