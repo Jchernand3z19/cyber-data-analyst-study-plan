@@ -1,5 +1,7 @@
 # Ruta de aprendizaje — Security Data Analyst
 
+<!-- BANNER: Reemplazar con tu imagen -->
+
 [![Licencia MIT](https://img.shields.io/badge/Licencia-MIT-green.svg)](LICENSE) [![Wazuh](https://img.shields.io/badge/Wazuh-4.9.0-blue.svg)](https://documentation.wazuh.com/4.9/) ![Estado](https://img.shields.io/badge/Estado-Completado-brightgreen.svg) ![Nivel](https://img.shields.io/badge/Nivel-Introductorio-informational.svg)
 
 Programa introductorio de 90 sesiones para desarrollar criterio analítico aplicado al dominio de la seguridad. La prioridad es producir datos interpretables y evidencia reproducible, no operar un SOC.
@@ -55,16 +57,53 @@ Consulta el [checklist de validación](templates/lab-validation-checklist.md) y 
 
 **Horario del bloque diario de estudio: 08:00 - 09:30 AM (America/Tegucigalpa).** Cada semana contiene cuatro bloques de avance de lunes a jueves. Nunca se programan dos laboratorios seguidos; en Fase 4, máximo dos laboratorios por semana. Los días libres no se utilizan para recuperar ni adelantar contenido.
 
-## Roadmap visual — 5 fases
+## Arquitectura de Wazuh en Docker
+
+> [!NOTE]
+> Este repositorio utiliza diagramas Mermaid dinámicos: GitHub interpreta el código Mermaid y renderiza los diagramas directamente en la página, incluidos sus estilos y colores.
 
 ```mermaid
-flowchart TD
-    A[Inicio: diagnóstico y fundamentos] --> B[Fase 1 · Días 1–18\nRedes, HTTP, SQL y seguridad]
-    B --> C[Fase 2 · Días 19–36\nPython, APIs y calidad de datos]
-    C --> D[Fase 3 · Días 37–52\nPower BI y analítica segura]
-    D --> E[Fase 4 · Días 53–70\nLogs y análisis de datos de seguridad]
-    E --> F[Fase 5 · Días 71–90\nGobierno, privacidad y proyecto final]
-    F --> G[Evaluación y paquete final de evidencias]
+flowchart LR
+    SSH[Logs SSH] --> M[Wazuh Manager]
+    subgraph DOCKER[Docker · despliegue Single-node]
+        M --> I[Wazuh Indexer]
+        I --> D[Wazuh Dashboard]
+    end
+    classDef logs fill:#f3f4f6,stroke:#64748b,color:#1f2937,stroke-width:1.5px;
+    classDef manager fill:#14532d,stroke:#166534,color:#ffffff,stroke-width:2px;
+    classDef indexer fill:#475569,stroke:#334155,color:#ffffff,stroke-width:2px;
+    classDef dashboard fill:#1d4ed8,stroke:#1e40af,color:#ffffff,stroke-width:2px;
+    classDef docker fill:#f8fafc,stroke:#64748b,color:#334155,stroke-width:2px,stroke-dasharray:5 5;
+    class SSH logs;
+    class M manager;
+    class I indexer;
+    class D dashboard;
+    class DOCKER docker;
+```
+
+La secuencia representa el flujo validado para el entorno Wazuh 4.9.0 Single-node: los eventos SSH llegan al Manager, se procesan y pasan al Indexer; el Dashboard consulta los datos indexados.
+
+## Roadmap visual — Fase 0 a Fase 5
+
+```mermaid
+flowchart LR
+    P0[Fase 0<br/>Fundamentos] --> P1[Fase 1<br/>Redes, HTTP y SQL]
+    P1 --> P2[Fase 2<br/>Python, APIs y calidad]
+    P2 --> P3[Fase 3<br/>Power BI y analítica]
+    P3 --> P4[Fase 4<br/>Logs y seguridad]
+    P4 --> P5[Fase 5<br/>Gobierno y proyecto final]
+    classDef phase0 fill:#e2e8f0,stroke:#64748b,color:#1e293b,stroke-width:2px;
+    classDef phase1 fill:#dbeafe,stroke:#2563eb,color:#1e3a8a,stroke-width:2px;
+    classDef phase2 fill:#dcfce7,stroke:#16a34a,color:#14532d,stroke-width:2px;
+    classDef phase3 fill:#fef3c7,stroke:#d97706,color:#78350f,stroke-width:2px;
+    classDef phase4 fill:#ede9fe,stroke:#7c3aed,color:#4c1d95,stroke-width:2px;
+    classDef phase5 fill:#fce7f3,stroke:#db2777,color:#831843,stroke-width:2px;
+    class P0 phase0;
+    class P1 phase1;
+    class P2 phase2;
+    class P3 phase3;
+    class P4 phase4;
+    class P5 phase5;
 ```
 
 ## Duración estimada por fase
@@ -125,6 +164,10 @@ Cada fase tiene quiz y debugging. La Fase 4 tiene una evaluación adaptada al ca
 Los requisitos son una referencia de preparación; la compatibilidad de cada herramienta también depende de su versión y arquitectura.
 
 Consulta el [checklist de laboratorio](templates/lab-validation-checklist.md).
+
+## Capturas
+
+<!-- DIAGRAMA: Reemplazar con tu diagrama de draw.io/Excalidraw -->
 
 <!-- Aquí va la captura del Dashboard de Wazuh -->
 
