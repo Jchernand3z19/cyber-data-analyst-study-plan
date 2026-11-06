@@ -18,7 +18,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
           user: Jchernand3z19
-          template: repository
+          template: terminal
           repo: security-data-analyst-learning-path
           filename: assets/metrics.svg
           output_action: commit
@@ -28,7 +28,7 @@ jobs:
           config_timezone: America/Tegucigalpa
           config_animations: yes
           base: header, repositories
-          plugin_commits: yes
-          plugin_commits_days: 365
-          plugin_commits_visibility: all
+          plugin_calendar: yes
+          plugin_lines: yes
+          plugin_lines_history_limit: 1
           config_display: large
